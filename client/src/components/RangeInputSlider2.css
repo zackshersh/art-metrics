@@ -1,0 +1,35 @@
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+
+  }
+
+  /***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+    /* background-color: gray; */
+    /* box-shadow: rgb(0,0,0,0.4) 0 4px 8px inset; */
+    height: 3.5rem;
+    border-radius: 4px;
+  }
+  
+  /******** Firefox ********/
+  input[type="range"]::-moz-range-track {
+
+    height: 0.75rem;
+    border-radius: 4px;
+  }
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    /* margin-top: -0.5rem;  */
+    box-shadow: rgba(0, 0, 0, 0.4) 0 1px 4px 0;
+    background-image: linear-gradient(180deg, rgba(206, 211, 234, 0.13) 0%, transparent 100%);
+    background-color: rgb(50,50,50);
+    border-radius: 4px;
+    height: 2rem;
+    width: 1rem;    
+    transform: translateY(12px);
+}

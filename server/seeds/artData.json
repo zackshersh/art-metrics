@@ -1,0 +1,183 @@
+[
+    {
+        "work_data":{
+            "title": "Halt of Caravans at the Wells of Saba (Beersheba) in the Desert South of Hebron",
+            "artist": "Charles de Coubertin",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/441358/1758385/main-image",
+            "date": "1817",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/441358"
+        },
+        "metrics": {
+            "boba_kiki": {
+                "valueHistory": [0.4, 0.6, 0.65, 0.8]
+            },
+            "fresh_smelly": {
+                "valueHistory": [-0.2, 0.5, 0.3, -0.99]
+            },
+            "sleepy_amped": {
+                "valueHistory": [-0.3,-0.5,0.4]
+            }
+        }
+    },
+    {
+        "work_data":{
+            "title": "Self-Portrait",
+            "artist": "George Henry Harlow",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436631/799830/main-image",
+            "date": "Late 1700s-Early 1800s",
+            "origin": "British",
+            "link": "https://www.metmuseum.org/art/collection/search/436631"
+        },
+        "metrics": {
+            "boba_kiki": {
+                "valueHistory": [-1, -0.8, -0.2, 0.4]
+            },
+            "fresh_smelly": {
+                "valueHistory": [-0.3, -0.2, -0.6, -0.1]
+            },
+            "sleepy_amped": {
+                "valueHistory": [0.2,-0.8, 0.1]
+            }
+        }
+    },
+    {
+        "work_data":{
+            "title": "Chrysanthemums in the Garden at Petit-Gennevilliers",
+            "artist": "Gustave Caillebotte",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/671456/1420632/main-image",
+            "date": "1893",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/671456"
+        },
+        "metrics": {
+            "boba_kiki": {
+                "valueHistory": [0.9, 0.5, -0.3, 0.3]
+            },
+            "fresh_smelly": {
+                "valueHistory": [-0.9, -0.753, 0.3, -0.4]
+            },
+            "sleepy_amped": {
+                "valueHistory": [-0.4,-0.4, -0.2]
+            }
+        }
+    },
+    {
+        "work_data":{
+            "title": "The Dormition of the Virgin",
+            "artist": "Ioannes Mokos",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/437100/800324/main-image",
+            "date": "Late 1600s-Early 1700s",
+            "origin": "Greek",
+            "link": "https://www.metmuseum.org/art/collection/search/437100"
+        },
+        "metrics": {
+            "boba_kiki": {
+                "valueHistory": [0.2, 0.6, 0.8, 0.8]
+            },
+            "fresh_smelly": {
+                "valueHistory": [0.9, 0.2, -0.3, 0.3]
+            },
+            "sleepy_amped": {
+                "valueHistory": [0.3,-0.6, 0.1]
+            }
+        }
+    },
+    {
+        "work_data":{
+            "title": "The Streetwalker",
+            "artist": "Henri de Toulouse-Lautrec",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/438016/799842/main-image",
+            "date": "1890-91",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/438016"
+        },
+        "metrics": {
+            "boba_kiki": {
+                "valueHistory": [-0.2, 0.5, 0.3, -0.99]
+            },
+            "fresh_smelly": {
+                "valueHistory": [0.4, 0.6, 0.65, 0.8]
+            },
+            "sleepy_amped": {
+                "valueHistory": [-0.3,-0.1, 0.1]
+            }
+        }
+    },
+    {
+        "work_data":{
+            "title": "The Golden Age",
+            "artist": "Joachim Wtewael",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/437955/795762/main-image",
+            "date": "1605",
+            "origin": "Netherlandish",
+            "link": "https://www.metmuseum.org/art/collection/search/437955"
+        },
+        "metrics": {
+            "boba_kiki": {},
+            "fresh_smelly": {
+
+            },
+            "sleepy_amped": {
+                "valueHistory": [-0.13,-0.56, 0.4]
+            }
+        }
+    },
+    {
+        "work_data":{
+            "title": "Woman Drying Her Arm",
+            "artist": "Edgar Degas",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436171/801982/main-image",
+            "date": "Late 1880s-Early 1890s",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/436171"
+        },
+        "metrics": {
+            "boba_kiki": {},
+            "fresh_smelly": {
+
+            },
+            "sleepy_amped": {
+                "valueHistory": [-0.43,-0.35, 0.42]
+            }
+        }
+    },
+    {
+        "work_data":{
+            "title": "Vanitas Still Life",
+            "artist": "Jacques de Gheyn II",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436485/795736/main-image",
+            "date": "1603",
+            "origin": "Netherlandish",
+            "link": "https://www.metmuseum.org/art/collection/search/436485"
+        },
+        "metrics": {
+            "boba_kiki": {},
+            "fresh_smelly": {
+
+            },
+            "sleepy_amped": {
+                "valueHistory": [0.3,0.5, 0.9]
+            }
+        }
+    },
+    {
+        "work_data":{
+            "title": "Saint John the Evangelist",
+            "artist": "Segna di Buonaventura",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/437651/1448115/main-image",
+            "date": "ca. 1320",
+            "origin": "Italian",
+            "link": "https://www.metmuseum.org/art/collection/search/437651"
+        },
+        "metrics": {
+            "boba_kiki": {},
+            "fresh_smelly": {
+
+            },
+            "sleepy_amped": {
+                "valueHistory": [0.7,0.7, 0.9]
+            }
+        }
+    }
+]

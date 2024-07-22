@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Neue-Montreal", "Helvetica", "Sans-Serif";
+}
+
+circle {
+    transition-property: r;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 0.5s;
+}
+
+rect {
+    transition-property: width, height, x, y;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 0.5s;
+}
+
+nav span {
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    display: inline-block;
+}
+nav:hover span {
+    transform: translateX(-8px);
+}
+
+body {
+    overflow-x: hidden !important;
+}
