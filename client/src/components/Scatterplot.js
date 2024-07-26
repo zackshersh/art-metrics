@@ -72,12 +72,12 @@ function Scatterplot(props) {
             // <line key={Math.random()} x1={margin.x} y1={(height/2)} x2={width-margin.x} y2={(height/2)}  style={axesStyle}/>,
             // <line key={Math.random()} x1={width/2} y1={margin.y} x2={width/2} y2={height-margin.y} stroke='url(#boba_kiki_gradient)'  style={axesStyle}/>,
             // darker wider rects for outlines
-            <rect key={0} x={margin.x} y={(height/2) - (lineWeight/2) - outlineOffset} width={width - margin.x*2} height={lineWeight + outlineOffset*2} fill={`black`} />,
-            <rect key={1} x={(width/2) - (lineWeight/2) - outlineOffset} y={margin.y} width={lineWeight + outlineOffset*2} height={height - margin.y*2} fill={`black`} />,
+            <rect key={0} x={margin.x} y={(height/2) - (lineWeight/2) - outlineOffset} width={width - margin.x*2} height={lineWeight + outlineOffset*2} fill={`black`}  className='no-transition'/>,
+            <rect key={1} x={(width/2) - (lineWeight/2) - outlineOffset} y={margin.y} width={lineWeight + outlineOffset*2} height={height - margin.y*2} fill={`black`}  className='no-transition'/>,
             
             // colorful lines
-            <rect key={2} x={margin.x} y={(height/2) - (lineWeight/2)} width={width - margin.x*2} height={lineWeight} fill={`url(#${xAxis}_h_gradient)`} />,
-            <rect key={3} x={(width/2) - (lineWeight/2)} y={margin.y} width={lineWeight} height={height - margin.y*2} fill={`url(#${yAxis}_v_gradient)`} />
+            <rect key={2} x={margin.x} y={(height/2) - (lineWeight/2)} width={width - margin.x*2} height={lineWeight} fill={`url(#${xAxis}_h_gradient)`}  className='no-transition'/>,
+            <rect key={3} x={(width/2) - (lineWeight/2)} y={margin.y} width={lineWeight} height={height - margin.y*2} fill={`url(#${yAxis}_v_gradient)`}  className='no-transition'/>
         ]
     }
 
@@ -164,38 +164,40 @@ function Scatterplot(props) {
 
     return (
         <div className='w-full flex h-full flex-col'>
-            <div className='h-full flex'>
-                <div className='min-w-full h-5/6 grow relative z-10 self-start my-5' ref={contRef}>
-                    <svg className='absolute' id='scatterplot-svg' width={width} height={height} ref={svgRef}>
-                        
-                        <g>
-                            {getAxes()}
-                        </g>
-                        <g>
-                            {getBackgroundElements()}
-                        </g>
-                        <g>
-                            { allArtworks != undefined ? allArtworks.map((work, i) => {
+            <div>
+                <div className='h-full flex'>
+                    <div className='min-w-full h-5/6 grow relative z-10 self-start my-5' ref={contRef}>
+                        <svg className='absolute' id='scatterplot-svg' width={width} height={height} ref={svgRef}>
+                            
+                            <g>
+                                {getAxes()}
+                            </g>
+                            <g>
+                                {getBackgroundElements()}
+                            </g>
+                            <g>
+                                { allArtworks != undefined ? allArtworks.map((work, i) => {
 
-                                let pos = {
-                                    x: x(work.metrics[xAxis].mean),
-                                    y: y(work.metrics[yAxis].mean)
-                                }
+                                    let pos = {
+                                        x: x(work.metrics[xAxis].mean),
+                                        y: y(work.metrics[yAxis].mean)
+                                    }
 
-                                return (<Dot key={i} work={work} pos={pos} setBackdrop={setBackdropImg} setDetailsPopupData={setDetailsPopupData}/>)
-                            }) : ""}
-                        </g>
-                        <ScatterPlotLinearGradients />
-                    </svg>
-                    {getLabels()}
+                                    return (<Dot key={i} work={work} pos={pos} setBackdrop={setBackdropImg} setDetailsPopupData={setDetailsPopupData}/>)
+                                }) : ""}
+                            </g>
+                            <ScatterPlotLinearGradients />
+                        </svg>
+                        {getLabels()}
+                    </div>
                 </div>
-            </div>
-            <div style={{height: 'calc(100% - 135px)'}} className='w-full flex justify-center align-center absolute top-50 left-0'>
-                {/* <div style={{maxWidth: "60%", maxHeight:"20%", display: "flex", margin: "auto auto", padding: 20}}  className='bg-red-300'> */}
-                    {backdropImg ? 
-                        <img style={{maxHeight: "70%", maxWidth: "80%", objectFit: "contain", margin: "auto auto", transform: "translateY(0vh)"}} className='z-0 w-full h-full' src={backdropImg} /> 
-                    : ''}
-                {/* </div> */}
+                <div style={{height: 'calc(100% - 135px)'}} className='w-full flex justify-center align-center absolute top-50 left-0'>
+                    {/* <div style={{maxWidth: "60%", maxHeight:"20%", display: "flex", margin: "auto auto", padding: 20}}  className='bg-red-300'> */}
+                        {backdropImg ? 
+                            <img style={{maxHeight: "70%", maxWidth: "80%", objectFit: "contain", margin: "auto auto", transform: "translateY(0vh)"}} className='z-0 w-full h-full' src={backdropImg} /> 
+                        : ''}
+                    {/* </div> */}
+                </div>
             </div>
             <ScatterplotOptions xAxis={xAxis} setXAxis={setXAxis} yAxis={yAxis} setYAxis={setYAxis} />
             <ArtDetailsPopup artwork={detailsPopupData} setArtwork={setDetailsPopupData} />

@@ -11,6 +11,7 @@ import Rating from './pages/Rating';
 import Home from './pages/Home';
 import Details from './pages/Details';
 import Title from './pages/Title';
+import About from './pages/About';
 
 const router  = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const router  = createBrowserRouter([
             {
                 path: "home",
                 element: <Home />
+            },
+            {
+                path: "about",
+                element: <About />
             },
             {
                 path: "details/:id",

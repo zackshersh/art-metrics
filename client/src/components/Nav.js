@@ -13,9 +13,16 @@ function Nav(props) {
         navigate("/")
     }
 
+    const navigateToAbout = () => {
+        navigate("/about")
+    }
+
     return (
-        <nav style={{boxShadow: softDropShadow}} className='flex p-3 bg-stone-200 border-b border-stone-300 '>
-            <h1 onMouseDown={navigateToTitle} className='font-bold text-xl'>Art Metrics</h1>
+        <nav style={{boxShadow: softDropShadow}} className='flex items-center justify-between p-3 px-6 bg-stone-200 border-b border-stone-300 '>
+            <h1 onMouseDown={navigateToTitle} className='font-bold text-xl'>Special Metrics</h1>
+            <div onMouseDown={navigateToAbout} className='flex justify-center items-center border-2 border-black rounded-full w-[32px] h-[32px] cursor-pointer hover:opacity-60'>
+                <p className='font-bold text-xl'>?</p>
+            </div>
         </nav>
     );
 }

@@ -12,7 +12,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import TitleJumbotron from '../components/TitleJumbotron';
 
 
-function TitleButton({text, path}){
+function TitleButton({text, path, primary=true, styles}){
 
     const navigate = useNavigate();
 
@@ -27,7 +27,7 @@ function TitleButton({text, path}){
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
 
-            className='bg-stone-900 text-white hover:bg-stone-700 transition-colors border border-stone-300 p-5 rounded-lg w-full'>
+            className={`${primary ? "bg-stone-900 text-white hover:bg-stone-700 flex-grow" : "bg-stone-300 text-black hover:bg-stone-200 flex-grow-0"} transition-colors border border-stone-300 p-5 rounded-lg ${styles}`}>
             <h1 className='text-3xl'>{text}</h1>
         </div>
     )
@@ -40,7 +40,7 @@ function Title(props) {
 
     const getBottomHeight = () => {
         if(window.innerWidth < 780){
-            return 300
+            return 250
         } else {
             return 200
         }
@@ -72,13 +72,15 @@ function Title(props) {
                 boxShadow: dropShadow
             }} className='h-full flex w-full flex-col md:flex-row bg-stone-100 p-5 rounded-lg border-stone-600'>
                 <div className='w-full h-full mr-3'>
-                    <h1 className='text-6xl font-bold'>Art Metrics</h1>
-                    <h3 className='text-2xl leading-tight mt-3'>Filler filler filler this is filler text but it will be explaining what Art Metrics is eventually.</h3>
+                    <h1 className='text-6xl font-bold'>Special Metrics</h1>
+                    <h3 className='text-2xl leading-tight mt-3'>Quantifying the unquantifiable qualities of art.</h3>
                 </div>
                 <div className='flex w-full md:flex-row'>
-                    <TitleButton text={"Explore"} path={"/home"}/>
-                    <div className='SPACER p-3'></div>
-                    <TitleButton text={"Rate"} />
+                    <TitleButton text={"Explore"} path={"/home"} styles={""}/>
+                    <div className='SPACER p-2'></div>
+                    <TitleButton text={"Rate"} path={"/rating"} />
+                    <div className='SPACER p-2'></div>
+                    <TitleButton text={"About"} path={"/about"} primary={false}/>
                 </div>
             </div>
 

@@ -18,6 +18,10 @@ rect {
     transition-duration: 0.5s;
 }
 
+.no-transition {
+    transition: none;
+}
+
 nav span {
     transition-property: transform;
     transition-duration: 0.5s;
