@@ -163,43 +163,46 @@ function Scatterplot(props) {
 
 
     return (
-        <div className='w-full flex h-full flex-col bg-red-500'>
-            <div className='h-full'>
-                <div className='h-full flex'>
-                    <div className='min-w-full h-5/6 grow relative z-10 self-start my-5' ref={contRef}>
-                        <svg className='absolute' id='scatterplot-svg' width={width} height={height} ref={svgRef}>
-                            
-                            <g>
-                                {getAxes()}
-                            </g>
-                            <g>
-                                {getBackgroundElements()}
-                            </g>
-                            <g>
-                                { allArtworks != undefined ? allArtworks.map((work, i) => {
+        <div className='w-full flex h-full flex-col'>
+            <div className='h-full' style={{
+                display: "grid",
+                gridTemplateColumns: "1fr",
+                gridTemplateRows: "1fr min-content"
+            }}>
+                <div className='SVG+BKG-IMG h-full bg-red-300 py-3'>
+                        <div className='min-w-full h-full grow relative z-10 self-start' ref={contRef}>
+                            <svg className='absolute' id='scatterplot-svg' width={width} height={height} ref={svgRef}>
+                                
+                                <g>
+                                    {getAxes()}
+                                </g>
+                                <g>
+                                    {getBackgroundElements()}
+                                </g>
+                                <g>
+                                    { allArtworks != undefined ? allArtworks.map((work, i) => {
+                                        
+                                        let pos = {
+                                            x: x(work.metrics[xAxis].mean),
+                                            y: y(work.metrics[yAxis].mean)
+                                        }
+                                        
+                                        return (<Dot key={i} work={work} pos={pos} setBackdrop={setBackdropImg} setDetailsPopupData={setDetailsPopupData}/>)
+                                    }) : ""}
+                                </g>
+                                <ScatterPlotLinearGradients />
+                            </svg>
+                            {getLabels()}
+                        </div>
 
-                                    let pos = {
-                                        x: x(work.metrics[xAxis].mean),
-                                        y: y(work.metrics[yAxis].mean)
-                                    }
-
-                                    return (<Dot key={i} work={work} pos={pos} setBackdrop={setBackdropImg} setDetailsPopupData={setDetailsPopupData}/>)
-                                }) : ""}
-                            </g>
-                            <ScatterPlotLinearGradients />
-                        </svg>
-                        {getLabels()}
+                    <div style={{height: 'calc(100% - 135px)'}} className='w-full flex justify-center align-center absolute top-12 left-0'>
+                            {backdropImg ? 
+                                <img style={{maxHeight: "70%", maxWidth: "80%", objectFit: "contain", margin: "auto auto", transform: "translateY(0vh)"}} className='z-0 w-full h-full' src={backdropImg} /> 
+                                : ''}
                     </div>
                 </div>
-                <div style={{height: 'calc(100% - 135px)'}} className='w-full flex justify-center align-center absolute top-12 left-0 bg-blue-200'>
-                    {/* <div style={{maxWidth: "60%", maxHeight:"20%", display: "flex", margin: "auto auto", padding: 20}}  className='bg-red-300'> */}
-                        {backdropImg ? 
-                            <img style={{maxHeight: "70%", maxWidth: "80%", objectFit: "contain", margin: "auto auto", transform: "translateY(0vh)"}} className='z-0 w-full h-full' src={backdropImg} /> 
-                        : ''}
-                    {/* </div> */}
-                </div>
+                <ScatterplotOptions xAxis={xAxis} setXAxis={setXAxis} yAxis={yAxis} setYAxis={setYAxis} />
             </div>
-            <ScatterplotOptions xAxis={xAxis} setXAxis={setXAxis} yAxis={yAxis} setYAxis={setYAxis} />
             <ArtDetailsPopup artwork={detailsPopupData} setArtwork={setDetailsPopupData} />
         </div>
     );
