@@ -69,9 +69,7 @@ function Scatterplot(props) {
         let outlineOffset = 0;
 
         return [
-            // <line key={Math.random()} x1={margin.x} y1={(height/2)} x2={width-margin.x} y2={(height/2)}  style={axesStyle}/>,
-            // <line key={Math.random()} x1={width/2} y1={margin.y} x2={width/2} y2={height-margin.y} stroke='url(#boba_kiki_gradient)'  style={axesStyle}/>,
-            // darker wider rects for outlines
+
             <rect key={0} x={margin.x} y={(height/2) - (lineWeight/2) - outlineOffset} width={width - margin.x*2} height={lineWeight + outlineOffset*2} fill={`black`}  className='no-transition'/>,
             <rect key={1} x={(width/2) - (lineWeight/2) - outlineOffset} y={margin.y} width={lineWeight + outlineOffset*2} height={height - margin.y*2} fill={`black`}  className='no-transition'/>,
             
@@ -169,7 +167,7 @@ function Scatterplot(props) {
                 gridTemplateColumns: "1fr",
                 gridTemplateRows: "1fr min-content"
             }}>
-                <div className='SVG+BKG-IMG h-full bg-red-300 py-3'>
+                <div className='SVG+BKG-IMG h-full py-3'>
                         <div className='min-w-full h-full grow relative z-10 self-start' ref={contRef}>
                             <svg className='absolute' id='scatterplot-svg' width={width} height={height} ref={svgRef}>
                                 
