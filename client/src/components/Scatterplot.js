@@ -163,8 +163,8 @@ function Scatterplot(props) {
 
 
     return (
-        <div className='w-full flex h-full flex-col'>
-            <div>
+        <div className='w-full flex h-full flex-col bg-red-500'>
+            <div className='h-full'>
                 <div className='h-full flex'>
                     <div className='min-w-full h-5/6 grow relative z-10 self-start my-5' ref={contRef}>
                         <svg className='absolute' id='scatterplot-svg' width={width} height={height} ref={svgRef}>
@@ -191,7 +191,7 @@ function Scatterplot(props) {
                         {getLabels()}
                     </div>
                 </div>
-                <div style={{height: 'calc(100% - 135px)'}} className='w-full flex justify-center align-center absolute top-50 left-0'>
+                <div style={{height: 'calc(100% - 135px)'}} className='w-full flex justify-center align-center absolute top-12 left-0 bg-blue-200'>
                     {/* <div style={{maxWidth: "60%", maxHeight:"20%", display: "flex", margin: "auto auto", padding: 20}}  className='bg-red-300'> */}
                         {backdropImg ? 
                             <img style={{maxHeight: "70%", maxWidth: "80%", objectFit: "contain", margin: "auto auto", transform: "translateY(0vh)"}} className='z-0 w-full h-full' src={backdropImg} /> 
