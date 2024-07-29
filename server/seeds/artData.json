@@ -7,17 +7,6 @@
             "date": "1817",
             "origin": "French",
             "link": "https://www.metmuseum.org/art/collection/search/441358"
-        },
-        "metrics": {
-            "boba_kiki": {
-                "valueHistory": [0.4, 0.6, 0.65, 0.8]
-            },
-            "fresh_smelly": {
-                "valueHistory": [-0.2, 0.5, 0.3, -0.99]
-            },
-            "sleepy_amped": {
-                "valueHistory": [-0.3,-0.5,0.4]
-            }
         }
     },
     {
@@ -28,17 +17,6 @@
             "date": "Late 1700s-Early 1800s",
             "origin": "British",
             "link": "https://www.metmuseum.org/art/collection/search/436631"
-        },
-        "metrics": {
-            "boba_kiki": {
-                "valueHistory": [-1, -0.8, -0.2, 0.4]
-            },
-            "fresh_smelly": {
-                "valueHistory": [-0.3, -0.2, -0.6, -0.1]
-            },
-            "sleepy_amped": {
-                "valueHistory": [0.2,-0.8, 0.1]
-            }
         }
     },
     {
@@ -49,17 +27,6 @@
             "date": "1893",
             "origin": "French",
             "link": "https://www.metmuseum.org/art/collection/search/671456"
-        },
-        "metrics": {
-            "boba_kiki": {
-                "valueHistory": [0.9, 0.5, -0.3, 0.3]
-            },
-            "fresh_smelly": {
-                "valueHistory": [-0.9, -0.753, 0.3, -0.4]
-            },
-            "sleepy_amped": {
-                "valueHistory": [-0.4,-0.4, -0.2]
-            }
         }
     },
     {
@@ -70,17 +37,6 @@
             "date": "Late 1600s-Early 1700s",
             "origin": "Greek",
             "link": "https://www.metmuseum.org/art/collection/search/437100"
-        },
-        "metrics": {
-            "boba_kiki": {
-                "valueHistory": [0.2, 0.6, 0.8, 0.8]
-            },
-            "fresh_smelly": {
-                "valueHistory": [0.9, 0.2, -0.3, 0.3]
-            },
-            "sleepy_amped": {
-                "valueHistory": [0.3,-0.6, 0.1]
-            }
         }
     },
     {
@@ -91,17 +47,6 @@
             "date": "1890-91",
             "origin": "French",
             "link": "https://www.metmuseum.org/art/collection/search/438016"
-        },
-        "metrics": {
-            "boba_kiki": {
-                "valueHistory": [-0.2, 0.5, 0.3, -0.99]
-            },
-            "fresh_smelly": {
-                "valueHistory": [0.4, 0.6, 0.65, 0.8]
-            },
-            "sleepy_amped": {
-                "valueHistory": [-0.3,-0.1, 0.1]
-            }
         }
     },
     {
@@ -112,15 +57,6 @@
             "date": "1605",
             "origin": "Netherlandish",
             "link": "https://www.metmuseum.org/art/collection/search/437955"
-        },
-        "metrics": {
-            "boba_kiki": {},
-            "fresh_smelly": {
-
-            },
-            "sleepy_amped": {
-                "valueHistory": [-0.13,-0.56, 0.4]
-            }
         }
     },
     {
@@ -131,15 +67,6 @@
             "date": "Late 1880s-Early 1890s",
             "origin": "French",
             "link": "https://www.metmuseum.org/art/collection/search/436171"
-        },
-        "metrics": {
-            "boba_kiki": {},
-            "fresh_smelly": {
-
-            },
-            "sleepy_amped": {
-                "valueHistory": [-0.43,-0.35, 0.42]
-            }
         }
     },
     {
@@ -150,15 +77,6 @@
             "date": "1603",
             "origin": "Netherlandish",
             "link": "https://www.metmuseum.org/art/collection/search/436485"
-        },
-        "metrics": {
-            "boba_kiki": {},
-            "fresh_smelly": {
-
-            },
-            "sleepy_amped": {
-                "valueHistory": [0.3,0.5, 0.9]
-            }
         }
     },
     {
@@ -169,15 +87,353 @@
             "date": "ca. 1320",
             "origin": "Italian",
             "link": "https://www.metmuseum.org/art/collection/search/437651"
-        },
-        "metrics": {
-            "boba_kiki": {},
-            "fresh_smelly": {
-
-            },
-            "sleepy_amped": {
-                "valueHistory": [0.7,0.7, 0.9]
-            }
+        }
+    },
+    {
+        "work_data":{
+            "title": "Architectural Model",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/315067/654914/main-image",
+            "date": "1st-8th Century",
+            "origin": "Mezcala",
+            "link": "https://www.metmuseum.org/art/collection/search/315067"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Winter Scene in Moonlight",
+            "artist": "Henry Farrer",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/16577/32443/main-image",
+            "date": "1869",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/16577"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Bottle",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/587/45408/main-image",
+            "date": "1700-1800",
+            "origin": "Czech Republic",
+            "link": "https://www.metmuseum.org/art/collection/search/587"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Richard Humphreys, the Boxer",
+            "artist": "John Hoppner",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436691/797733/main-image",
+            "date": "Late 1700s",
+            "origin": "British",
+            "link": "https://www.metmuseum.org/art/collection/search/436691"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Portraits at the Stock Exchange",
+            "artist": "Edgar Degas",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436154/795940/main-image",
+            "date": "ca. 1878-79",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/436154"
+        }
+    },
+    {
+        "work_data":{
+            "title": "La Berceuse (Woman Rocking a Cradle; Augustine-Alix Pellicot Roulin, 1851-1930)",
+            "artist": "Vincent van Gogh",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/437984/1964024/main-image",
+            "date": "ca. 1889",
+            "origin": "Dutch",
+            "link": "https://www.metmuseum.org/art/collection/search/437984"
+        }
+    },
+    {
+        "work_data":{
+            "title": "The Three Ages of Humans",
+            "artist": "Dosso Dossi (Giovanni de Lutero)",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436208/794444/main-image",
+            "date": "Early 1500s",
+            "origin": "Italian",
+            "link": "https://www.metmuseum.org/art/collection/search/436208"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Pandora",
+            "artist": "Odilon Redon",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/437383/2008874/main-image",
+            "date": "ca. 1914",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/437383"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Saint John the Evangelist with Acteus and Eugenius",
+            "artist": "Francescuccio Ghissi (Francesco di Cecco Ghissi)",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436496/1575899/main-image",
+            "date": "ca. 1370",
+            "origin": "Italian",
+            "link": "https://www.metmuseum.org/art/collection/search/436496"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Still Life: A Banqueting Scene",
+            "artist": "Jan Davidsz de Heem",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436637/793886/main-image",
+            "date": "ca. 1640-41",
+            "origin": "Dutch",
+            "link": "https://www.metmuseum.org/art/collection/search/436637"
+        }
+    },
+    {
+        "work_data":{
+            "title": "A Farm in Brittany",
+            "artist": "Paul Gaugin",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436448/794449/main-image",
+            "date": "ca. 1894",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/436448"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Saint Nicholas Resuscitating Three Youths",
+            "artist": "Bicci di Lorenzo",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/435669/802834/main-image",
+            "date": "1433-35",
+            "origin": "Italian",
+            "link": "https://www.metmuseum.org/art/collection/search/435669"
+        }
+    },
+    {
+        "work_data":{
+            "title": "The Turkish Patrol",
+            "artist": "Alexandre-Gabriel Decamps",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436116/799621/main-image",
+            "date": "ca. 1855-56",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/436116"
+        }
+    },
+    {
+        "work_data":{
+            "title": "The Conversion of Saint Paul",
+            "artist": "Benozzo Gozzoli (Benozzo di Lese di Sandro)",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436562/1991220/main-image",
+            "date": "1460s",
+            "origin": "Italian",
+            "link": "https://www.metmuseum.org/art/collection/search/436562"
+        }
+    },
+    {
+        "work_data":{
+            "title": "A Boy with a Cat — Morning",
+            "artist": "Thomas Gainsborough",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436433/799817/main-image",
+            "date": "1787",
+            "origin": "British",
+            "link": "https://www.metmuseum.org/art/collection/search/436433"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Study of a Nude Man",
+            "artist": "Gustave Courbet",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/848137/2114874/main-image",
+            "date": "Early 1840s",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/848137"
+        }
+    },
+    {
+        "work_data":{
+            "title": "A Hare and Birds",
+            "artist": "Jan Fyt",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436425/1894555/main-image",
+            "date": "1600s",
+            "origin": "Flemish",
+            "link": "https://www.metmuseum.org/art/collection/search/436425"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Female protome-mask",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/241032/530706/main-image",
+            "date": "ca. 600-480 BCE",
+            "origin": "Cypriot",
+            "link": "https://www.metmuseum.org/art/collection/search/241032"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Pair of Standing Nude Male Figures Demonstrating the Principles of Contrapposto according to Michelangelo and Phidias",
+            "artist": "Auguste Rodin",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/207693/1710714/main-image",
+            "date": "ca. 1911",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/207693"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Prize Cow and Calf",
+            "artist": "Horatio Ross",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/288084/608244/main-image",
+            "date": "ca. 1859",
+            "origin": "British",
+            "link": "https://www.metmuseum.org/art/collection/search/288084"
+        }
+    },
+    {
+        "work_data":{
+            "title": "The Ghost in the Stereoscope",
+            "artist": "Published by London Stereoscopic Company",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/302466/633122/main-image",
+            "date": "ca. 1856",
+            "origin": "British",
+            "link": "https://www.metmuseum.org/art/collection/search/302466"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Aberdeen Portraits No. 1",
+            "artist": "George Washington Wilson",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/298968/631610/main-image",
+            "date": "1857",
+            "origin": "British",
+            "link": "https://www.metmuseum.org/art/collection/search/298968"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Assault on Arnhem",
+            "artist": "U.S. Army Photographic Signal Corps",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/286447/2021436/main-image",
+            "date": "1944",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/286447"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Self-Portrait with Maurice Sendak",
+            "artist": "John Dugdale",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/286447/2021436/main-image",
+            "date": "1944",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/286447"
+        }
+    },
+    {
+        "work_data":{
+            "title": "A Car Load of Texas Corn",
+            "artist": "George B. Cornish",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/288720/633109/main-image",
+            "date": "ca. 1910",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/288720"
+        }
+    },
+    {
+        "work_data":{
+            "title": "The Harbor",
+            "artist": "Josef Presser",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/488108/1009145/main-image",
+            "date": "ca. 1941",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/488108"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Corner",
+            "artist": "Isobel Bates",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/488131/2208828/main-image",
+            "date": "1941",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/488131"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Waterfront",
+            "artist": "Joseph Kaplan",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/488134/2234620/main-image",
+            "date": "ca. 1940",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/488134"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Summer Day",
+            "artist": "Richard Sussman",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/488143/1010418/main-image",
+            "date": "ca. 1939",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/488143"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Boardwalk and Beach",
+            "artist": "Esther Garber",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/488113/2245080/main-image",
+            "date": "ca. 1939",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/488113"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Woman's Head",
+            "artist": "Amedeo Modigliani",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/486837/1008403/main-image",
+            "date": "1912",
+            "origin": "Italian",
+            "link": "https://www.metmuseum.org/art/collection/search/486837"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Young Duck",
+            "artist": "Harry Dickinson Thrasher",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/480667/1006112/main-image",
+            "date": "ca. 1914-16",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/480667"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Unique Forms of Continuity in Space",
+            "artist": "Umberto Boccioni",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/485540/1005475/main-image",
+            "date": "1913",
+            "origin": "Italian",
+            "link": "https://www.metmuseum.org/art/collection/search/485540"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Self-Portrait",
+            "artist": "Egon Schiele",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/483438/1016551/main-image",
+            "date": "1911",
+            "origin": "Austrian",
+            "link": "https://www.metmuseum.org/art/collection/search/483438"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Seated Figure",
+            "artist": "Elemér de Kóródy",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/489092/2172638/main-image",
+            "date": "ca. 1913",
+            "origin": "Hungarian",
+            "link": "https://www.metmuseum.org/art/collection/search/489092"
         }
     }
 ]
