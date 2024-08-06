@@ -12,7 +12,7 @@ function Button({handler, label, active, size="md", importance="primary", sizing
                 return "px-6 py-2"
                 break;
             case "lg":
-                return "px-6 py-4"
+                return "px-6 py-3"
                 break;
             default:
                 return "px-6 py-2"

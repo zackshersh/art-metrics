@@ -27,8 +27,8 @@ function TitleButton({text, path, primary=true, styles}){
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
 
-            className={`${primary ? "bg-stone-900 text-white hover:bg-stone-700 flex-grow" : "bg-stone-300 text-black hover:bg-stone-200 flex-grow-0"} transition-colors border border-stone-300 p-5 rounded-lg ${styles}`}>
-            <h1 className='text-3xl'>{text}</h1>
+            className={` flex justify-start items-start ${primary ? "bg-stone-900 text-white hover:bg-stone-700 flex-grow" : "bg-stone-300 text-black hover:bg-stone-200 flex-grow-0"} transition-colors border border-stone-300 p-5 rounded-lg ${styles}`}>
+            <h1 className='text-xl'>{text}</h1>
         </div>
     )
 }
@@ -72,7 +72,7 @@ function Title(props) {
                 boxShadow: dropShadow
             }} className='h-full flex w-full flex-col md:flex-row bg-stone-100 p-5 rounded-lg border-stone-600'>
                 <div className='w-full h-full mr-3'>
-                    <h1 className='text-6xl font-bold'>Special Metrics</h1>
+                    <h1 className='text-5xl font-bold'>Subjective Measures</h1>
                     <h3 className='text-2xl leading-tight mt-3'>Quantifying the unquantifiable qualities of art.</h3>
                 </div>
                 <div className='flex w-full md:flex-row'>

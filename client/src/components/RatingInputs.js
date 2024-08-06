@@ -4,8 +4,6 @@ import Button from './Button';
 
 import { Link } from 'react-router-dom';
 
-
-
 import Nav from './Nav';
 
 function RatingInputs({userRatings, setUserRatings, canSubmit, setCanSubmit, submitHandler, skipHandler, parentReset, sizingStyles, verticalLayout}) {
@@ -16,8 +14,8 @@ function RatingInputs({userRatings, setUserRatings, canSubmit, setCanSubmit, sub
 
 
     const incrementRatedCount = () => {
-        console.log("INCREMENTING")
-        console.log(userRatings.valuesSet)
+        // console.log("INCREMENTING")
+        // console.log(userRatings.valuesSet)
         // if(userRatings.numRatingsSet + 1 >= submitThreshold){
         //     setCanSubmit(true);
         // }
@@ -34,37 +32,8 @@ function RatingInputs({userRatings, setUserRatings, canSubmit, setCanSubmit, sub
             }
         }
         
-
         setUserRatings(updated);
     }
-
-    const setBoba_Kiki = (val) => {
-        let updated = {...userRatings, boba_kiki: val};
-
-        let index = updated.valuesSet.indexOf("boba_kiki");
-
-        // "boba_kiki" has not been interacted with yet
-        if(index == -1){
-            updated.valuesSet.push("boba_kiki");
-        }
-
-
-        setUserRatings(updated);
-    }
-
-    const setFresh_Smelly = (val) => {
-        let updated = {...userRatings, fresh_smelly: val};
-        setUserRatings(updated);
-    }
-
-    const setSleepy_Amped = (val) => {
-        let updated = {...userRatings, sleepy_amped: val};
-        setUserRatings(updated);
-    }
-
-
-
-
 
 
     // useEffect(() => {

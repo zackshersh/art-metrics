@@ -5,13 +5,14 @@ import "./RangeInputSlider2.css"
 import { rangeInputShadow } from './boxShadowStyles';
 import { scale } from '../utils/utils';
 
-function RangeInputSlider2({ handler, min, max, vertical, gradientColors}) {
+function RangeInputSlider2({ value, handler, min, max, vertical, gradientColors}) {
 
-    const [ value, setValue ] = useState(0);
+    // const [ value, setValue ] = useState(0);
 
-    useEffect(() => {
-        handler(value);
-    },[value])
+    // useEffect(() => {
+    //     // handler(value);
+    //     // console.log(value)
+    // },[value])
 
     const styles = vertical ? {
         writingMode: "vertical-lr",
@@ -35,13 +36,13 @@ function RangeInputSlider2({ handler, min, max, vertical, gradientColors}) {
     }
 
 
-    const tickLineLength = window.innerWidth / 1.5;
+    const tickLineLength = window.innerWidth * 2;
 
     const generateTicks = () => {
         let arr = [];
 
         let yOff = 24;
-        let tickCount = 80;
+        let tickCount = 256;
 
         for(var i=0; i<tickCount; i++){
             let x = i / tickCount;
@@ -63,7 +64,8 @@ function RangeInputSlider2({ handler, min, max, vertical, gradientColors}) {
     return (
         <div className='relative'>
             <input className='relative z-10 h-8' style={{...styles}} type='range' step={0.01} min={min} max={max} value={value} onChange={(e) => {
-                setValue(e.target.value);
+                // setValue(e.target.value);
+                handler(e.target.value)
             }}/>
 
             {/* #### TRACK #### */}
@@ -72,7 +74,7 @@ function RangeInputSlider2({ handler, min, max, vertical, gradientColors}) {
             }}
              className='absolute top-0 w-full min-h-[30px] overflow-hidden rounded-md border border-stone-400 bg-stone-100 z-0'>
                 <svg style={{
-                    transform: `translateX(${scale(value, -1, 1, 0, tickLineLength-(window.innerWidth / 2)) * -1}px)`
+                    transform: `translateX(${scale(value, -1, 1, 0, (tickLineLength / 1.3)-(window.innerWidth / 2)) * -0.5}px)`
                 }} width={tickLineLength} height={30}>
                     {generateTicks()}
                 </svg>

@@ -23,13 +23,13 @@ function MiniArtworkDisplay({artwork, verticalLayout}) {
                 <img  style={{
                     boxShadow: "rgba(0, 0, 0, 0.4) 0px 4px 8px 0px",
                 }} 
-                // onMouseEnter={() => {setEnlarged(true)}}
-                // onMouseLeave={() => {setEnlarged(false)}}
-                onMouseDown={() => {setEnlarged(true)}}
-                onTouchStart={handleTouchStart}
-                onTouchEnd={() => {setEnlarged(false)}}
-                className={`object-contain rounded-md ${ verticalLayout ? "max-h-[40vh] max-w-[80vw]" : "max-h-[70vh] max-w-[50vw]"}`} 
-                src={artwork.work_data.img_url} />
+                    // onMouseEnter={() => {setEnlarged(true)}}
+                    // onMouseLeave={() => {setEnlarged(false)}}
+                    onMouseDown={() => {setEnlarged(true)}}
+                    onTouchStart={handleTouchStart}
+                    onTouchEnd={() => {setEnlarged(false)}}
+                    className={`object-contain rounded-md ${ verticalLayout ? "max-h-[30vh] max-w-[80vw]" : "max-h-[70vh] max-w-[50vw]"}`} 
+                    src={artwork.work_data.img_url} />
             </div>
             <div className='pt-3'>
                 <h5 className={`${verticalLayout ? "text-lg" : "text-xl"} italic`}>{artwork.work_data.title}</h5>

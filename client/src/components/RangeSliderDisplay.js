@@ -17,7 +17,7 @@ function RangeSliderDisplay({value, valueName, minLabel, maxLabel, verticallyCom
         if(minValue == 0 && maxValue == 0){
             return ""
         } else if(value > 0){
-            return "text-xl md:text-2xl font-bold"
+            return "text-xl md:text-xl font-bold"
         } else if (value == 0){
             return "text-sm text-stone-500"
         }

@@ -17,7 +17,7 @@ function SvgDynamicIcon({valueName, value, scaleFactor, colorExagerationFactor=0
 
 
     useEffect(() => {
-        console.log(minColor, maxColor)
+
     },[])
 
 
@@ -68,9 +68,9 @@ function SvgDynamicIcon({valueName, value, scaleFactor, colorExagerationFactor=0
 
     return (
         <div style={{
-            width: Math.floor(sideLength * scaleFactor),
+            width: Math.floor(sideLength * scaleFactor * 1.5),
             height: Math.floor(sideLength * scaleFactor)
-        }} className='flex justify-center items-center'>
+        }} className='flex justify-center items-center w-full h-full'>
             <svg style={{
                 transform: `scale(${scaleFactor})`
             }} width={sideLength} height={sideLength} className=''>

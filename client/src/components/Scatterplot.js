@@ -57,7 +57,7 @@ function Scatterplot(props) {
         .range([margin.x, width-margin.x]);
 
     let y = d3.scaleLinear()
-        .domain([-1, 1])
+        .domain([1, -1])
         .range([height - margin.y, margin.y]);
 
     const getAxes = () => {

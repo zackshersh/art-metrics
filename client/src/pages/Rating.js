@@ -15,7 +15,7 @@ function Rating(props) {
     const [allArtworks, setAllArtworks] = useState(undefined);
     const [currentWorkIndex, setCurrentWorkIndex] = useState(0);
 
-    const currentWork = () => {return allArtworks[currentWorkIndex]};
+    const currentWork = () => {console.log(allArtworks, currentWorkIndex) ; return allArtworks[currentWorkIndex]};
 
     const userRatingsDefault = {
         boba_kiki: 0,
@@ -67,6 +67,9 @@ function Rating(props) {
     },[])
 
     useEffect(() => {
+        
+        if(!allArtworks) return;
+
         try {
             if( checkIfVisited( currentWork()._id ) ){
                 advanceToNext();
@@ -74,6 +77,7 @@ function Rating(props) {
         } catch (err) {
             console.error(err);
         }
+
     },[allArtworks])
 
     const reset = () => {
