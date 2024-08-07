@@ -7,7 +7,7 @@ function Dot({work, pos, setBackdrop, setDetailsPopupData}) {
 
 
     const [textStyle, setTextStyle] = useState("13px Neue-Montreal");
-    const [labelString, setLabelString] = useState("View Details >")
+    const [labelString, setLabelString] = useState("View Details →")
     const [textDims, setTextDims] = useState(getElemDimmensions("text", labelString, {style: {font: textStyle}}));
 
     const [radius, setRadius] = useState(4);
@@ -56,8 +56,10 @@ function Dot({work, pos, setBackdrop, setDetailsPopupData}) {
 
     const getMaskRect = () => {
 
-        let w = active ? textDims.width + labelPadding.x : 10;
-        let h = active ? textDims.height + labelPadding.y : 10;
+        let inactiveRadius = 8
+
+        let w = active ? textDims.width + labelPadding.x : inactiveRadius;
+        let h = active ? textDims.height + labelPadding.y : inactiveRadius;
 
         let mW = 100;
         let mH = 50;

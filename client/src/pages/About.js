@@ -45,7 +45,9 @@ function About(props) {
                 <section className='mt-8'>
                     <h3 className='pt-1 border-t border-black text-3xl font-bold'>Boba-Kiki Explained</h3>
                     <img className='w-[400px]' src={boba_kiki_img}></img>
-                    <p className='mt-3'>Boba and Kiki are in reference to the Boba-Kiki effect, an effect demonstrated in experiments where people were presented with the 2 shapes seen above and asked which one was "Boba" and which one was "Kiki".</p>
+                    <p className='mt-3'>The Boba-Kiki metric is in reference to the Boba-Kiki effect, which describes how humans have innate associations with certain words rather than words all being arbitrary. It was demonstrated in experiments where people were shown the two shapes seen above and asked which one was "Boba" and which was "Kiki". They consistently assigned "Boba" to the round shape and "Kiki" to the spiky shape.</p>
+                    <p className='mt-3'>The goal of using Boba-Kiki, rather than something like Round-Spiky, is to describe more than just the forms and shapes of a work. Just like Boba and Kiki are associated with round and spiky shapes respectively, what subject matter or emotions are Boba and which are Kiki?</p>
+                    <p className='mt-3 text-lg font-bold'>You see a mother porcupine lovingly caring for her child, is that Boba or Kiki?</p>
                     {/* <div className='flex flex-wrap justify-between'>
                         <MetricExplanation metric={"boba_kiki"} min={"Boba"} max={"Kiki"} text={
                             `Boba and Kiki are in reference to the Boba/Kiki effect, which was first discovered in a study that when given a list of nonsensical words and arbitrary shapes, subjects would consistently assign words like "Kiki" to sharp or spiky shapes and would assign words like "Boba" to round shapes.`

@@ -2,11 +2,19 @@ import React, { useEffect, useState } from 'react';
 import { rangeInputShadow } from './boxShadowStyles';
 import { clamp } from '../utils/utils';
 import SvgDynamicIcon from './SvgDynamicIcon';
+import PopupWrapper from './PopupWrapper';
+import BobaKikiExplanation from './BobaKikiExplanation';
 
 function RangeSliderDisplay({value, valueName, minLabel, maxLabel, verticallyCompact}) {
 
     const [minValue, setMinValue] = useState(0);
     const [maxValue, setMaxValue] = useState(0);
+
+    const [displayBobaKikiExlpanation, setDisplayBobaKikiExplanation] = useState(false);
+
+    const triggerBobaKikiExplanation = () => {
+        setDisplayBobaKikiExplanation(true);
+    }
 
     useEffect(() => {
         setMinValue(clamp(value,-1,0)*-100);
@@ -26,16 +34,31 @@ function RangeSliderDisplay({value, valueName, minLabel, maxLabel, verticallyCom
     return (
         <div style={{
             boxShadow: rangeInputShadow.boxShadow
-        }} className={`p-1 pl-2 mb-1 bg-stone-100 ${verticallyCompact ? "h-10" : "h-[60px]"} rounded-md  border border-stone-400 bg-stone-100 flex items-center *:mr-3`}>
-            {/* SVG ICON */}
-            <SvgDynamicIcon valueName={valueName} value={value} scaleFactor={verticallyCompact ? 0.7 : 1} />
-            
-            {/* VALUE DISPLAY */}
-            <div className={`flex ${verticallyCompact ? "flex-row items-center" : "flex-col"} justify-center`}>
-                <h3 className={`transition-all text-nowrap ${verticallyCompact ? "mr-3" : "mb-[-0.25rem]"} ${getValueLabelStyles(minValue)}`}>{minValue.toFixed(0)}% {minLabel}</h3>
-                {/* SPACER */}
-                <h3 className={`transition-all text-nowrap ${getValueLabelStyles(maxValue)}`}>{maxValue.toFixed(0)}% {maxLabel}</h3>
+        }} className={`p-1 pl-2 mb-1 bg-stone-100 ${verticallyCompact ? "h-10" : "h-[60px]"} rounded-md  border border-stone-400 bg-stone-100 flex items-center justify-between *:mr-3`}>
+            {/* MAIN CONTENT CONTAINER */}
+            <div className='flex items-center h-full'>
+                {/* SVG ICON */}
+                <SvgDynamicIcon valueName={valueName} value={value} scaleFactor={verticallyCompact ? 0.7 : 1} />
+                
+                {/* VALUE DISPLAY */}
+                <div className={`flex ${verticallyCompact ? "flex-row items-center" : "flex-col"} justify-center`}>
+                    <h3 className={`transition-all text-nowrap ${verticallyCompact ? "mr-3" : "mb-[-0.25rem]"} ${getValueLabelStyles(minValue)}`}>{minValue.toFixed(0)}% {minLabel}</h3>
+                    {/* SPACER */}
+                    <h3 className={`transition-all text-nowrap ${getValueLabelStyles(maxValue)}`}>{maxValue.toFixed(0)}% {maxLabel}</h3>
+                </div>
             </div>
+
+            {/* BOBA-KIKI ? CONTAINER */}
+            { valueName == "boba_kiki" ? 
+                <div className='w-5 h-5 border border-stone-500 p-1 flex justify-center items-center rounded-full cursor-pointer hover:opacity-60' onMouseDown={triggerBobaKikiExplanation}>
+                    <p className='text-stone-500 text-sm'>?</p>
+                </div> : ""
+            }
+
+            <PopupWrapper active={displayBobaKikiExlpanation} setActive={setDisplayBobaKikiExplanation}>
+                <BobaKikiExplanation />
+            </PopupWrapper>
+
         </div>
     );
 }
