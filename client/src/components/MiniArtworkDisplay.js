@@ -7,7 +7,11 @@ function MiniArtworkDisplay({artwork, verticalLayout}) {
     const [touchMode, setTouchMode] = useState(false);
     const [touchStartPos, setTouchStartPos] = useState();
 
+    // const [showEnlargeTooltip, setShowEnlargeTooltip] = useState(true);
 
+    // useEffect(() => {
+    //     if(enlarged == true) setShowEnlargeTooltip(false);
+    // }, [enlarged])
 
     const handleTouchStart = (e) => {
         setEnlarged(true); 
@@ -16,10 +20,12 @@ function MiniArtworkDisplay({artwork, verticalLayout}) {
 
 
 
+
+
     return (
         <div className=''>
 
-            <div className={`w-full h-full flex justify-center items-center min-h-full ${ verticalLayout ? "max-h-[35vh] max-w-[80vw]" : "max-h-[70vh] max-w-[50vw]"} overflow-hidden`}>
+            <div className={`w-full h-full flex justify-center items-center min-h-full ${ verticalLayout ? "max-h-[35vh] max-w-[80vw]" : "max-h-[70vh] max-w-[50vw]"} overflow-hidden relative`}>
                 <img  style={{
                     boxShadow: "rgba(0, 0, 0, 0.4) 0px 4px 8px 0px",
                 }} 
@@ -30,6 +36,7 @@ function MiniArtworkDisplay({artwork, verticalLayout}) {
                     onTouchEnd={() => {setEnlarged(false)}}
                     className={`object-contain cursor-pointer rounded-md ${ verticalLayout ? "max-h-[35vh] max-w-[80vw]" : "max-h-[70vh] max-w-[50vw]"}`} 
                     src={artwork.work_data.img_url} />
+                <p className='absolute top-2 left-2 rounded-md bg-stone-200 py-1 px-2 text-sm opacity-55 pointer-events-none'>+ Click to Enlarge</p>
             </div>
             <div className='pt-3'>
                 <h5 className={`${verticalLayout ? "text-md" : "text-lg"} italic leading-snug`}>{artwork.work_data.title}</h5>

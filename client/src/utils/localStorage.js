@@ -1,11 +1,11 @@
 
 
-const lsRetrieve = (name) => {
+export const lsRetrieve = (name) => {
     let data = localStorage.getItem(name);
     return JSON.parse(data);
 }
 
-const lsStore = (name, data) => {
+export const lsStore = (name, data) => {
     localStorage.setItem( name,
         JSON.stringify(data)
     )

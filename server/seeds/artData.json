@@ -318,16 +318,6 @@
     },
     {
         "work_data":{
-            "title": "Self-Portrait with Maurice Sendak",
-            "artist": "John Dugdale",
-            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/286447/2021436/main-image",
-            "date": "1944",
-            "origin": "American",
-            "link": "https://www.metmuseum.org/art/collection/search/286447"
-        }
-    },
-    {
-        "work_data":{
             "title": "A Car Load of Texas Corn",
             "artist": "George B. Cornish",
             "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/288720/633109/main-image",
