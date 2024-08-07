@@ -58,6 +58,7 @@ function Rating(props) {
             }
         }
 
+
         getAll();
 
     }
@@ -88,7 +89,7 @@ function Rating(props) {
     // *****************
     // ADVANCING TO NEXT
     // *****************
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         console.log(userRatings)
         let ratingsCopy = {...userRatings};
         delete ratingsCopy.valuesSet;
@@ -123,7 +124,7 @@ function Rating(props) {
             }
 
             let _id =  allArtworks[currentWorkIndex + i]._id;
-            console.log(_id)
+
             if(checkIfVisited(_id)){
                 i++;
             } else {
@@ -185,19 +186,20 @@ function Rating(props) {
     },[useWindowSize()])
 
     return (
-        <div className=' bg-stone-100 px-5 pt-2 pb-5 h-screen'
+        <div className=' bg-stone-100 h-screen'
             style={{
                 display: "grid",
                 gridTemplateColumns: "1fr",
-                gridTemplateRows: "36px 1fr"
+                gridTemplateRows: "50px 1fr"
             }}>
-            <div className='w-full flex justify-center mb-1 py-1 rounded-md hover:bg-stone-300 transition-colors'>
+            {/* <div className='w-full flex justify-center mb-1 py-1 rounded-md hover:bg-stone-300 transition-colors'>
                 <Link to={"/home"}>← Home</Link>
-            </div>
+            </div> */}
+            <Nav></Nav>
             <div style={{
-                boxShadow: "rgba(0, 0, 0, 0.2) 0px 4px 8px -4px inset"
+                // boxShadow: "rgba(0, 0, 0, 0.2) 0px 4px 8px -4px inset"
             }}
-            className={`bg-stone-300 p-2 rounded-lg flex ${verticalLayout ? "flex-col-reverse " : "flex-row items-center"}`}>
+            className={`bg-stone-300 p-2 flex ${verticalLayout ? "flex-col-reverse " : "flex-row items-center"}`}>
 
                 <RatingInputs userRatings={userRatings} setUserRatings={setUserRatings} canSubmit={canSubmit} setCanSubmit={setCanSubmit} submitHandler={handleSubmit} skipHandler={handleSkip} sizingStyles={verticalLayout ? "w-full" : "w-2/5"} verticalLayout={verticalLayout}/>
 
@@ -205,7 +207,7 @@ function Rating(props) {
                 <div className='SPACER pl-3'> </div>
                 <div className={`${verticalLayout ? "w-full": "w-3/5"} h-full `}>
                     <div className='flex justify-center items-center h-full p-3 w-full rounded-lg'>
-                        {checkIfValidCurrentWork() ? <MiniArtworkDisplay artwork={allArtworks[currentWorkIndex]} verticalLayout={verticalLayout}/> : "None Left"}
+                        {checkIfValidCurrentWork() ? <MiniArtworkDisplay artwork={allArtworks[currentWorkIndex]} verticalLayout={verticalLayout}/> : "No Artworks Left"}
                     </div>
                 </div>
 

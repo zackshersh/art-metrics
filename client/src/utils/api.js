@@ -25,13 +25,16 @@ export const getArtwork = (id) => {
     })
 }
 
-export const submitRatings = (id, ratings) => {
+export const submitRatings = async (id, ratings) => {
 
-    return fetch(`/api/${id}`, {
+    const response = await fetch(`/api/${id}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({...ratings, _id: id})
-    })
+    });
+
+    console.log(response)
+    return response;
 }

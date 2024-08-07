@@ -19,7 +19,7 @@ function MiniArtworkDisplay({artwork, verticalLayout}) {
     return (
         <div className=''>
 
-            <div className={`w-full h-full flex justify-center items-center border border-red-500 min-h-full`}>
+            <div className={`w-full h-full flex justify-center items-center min-h-full ${ verticalLayout ? "max-h-[35vh] max-w-[80vw]" : "max-h-[70vh] max-w-[50vw]"} overflow-hidden`}>
                 <img  style={{
                     boxShadow: "rgba(0, 0, 0, 0.4) 0px 4px 8px 0px",
                 }} 
@@ -28,11 +28,11 @@ function MiniArtworkDisplay({artwork, verticalLayout}) {
                     onMouseDown={() => {setEnlarged(true)}}
                     onTouchStart={handleTouchStart}
                     onTouchEnd={() => {setEnlarged(false)}}
-                    className={`object-contain rounded-md ${ verticalLayout ? "max-h-[30vh] max-w-[80vw]" : "max-h-[70vh] max-w-[50vw]"}`} 
+                    className={`object-contain cursor-pointer rounded-md ${ verticalLayout ? "max-h-[35vh] max-w-[80vw]" : "max-h-[70vh] max-w-[50vw]"}`} 
                     src={artwork.work_data.img_url} />
             </div>
             <div className='pt-3'>
-                <h5 className={`${verticalLayout ? "text-lg" : "text-xl"} italic`}>{artwork.work_data.title}</h5>
+                <h5 className={`${verticalLayout ? "text-md" : "text-lg"} italic leading-snug`}>{artwork.work_data.title}</h5>
                 <h5 className={`${verticalLayout ? "text-sm" : ""}`}>{artwork.work_data.artist}</h5>
             </div>
 

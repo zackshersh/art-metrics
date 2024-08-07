@@ -32,7 +32,7 @@ function Scatterplot(props) {
             try {
                 let res = await getAllArtworks();
                 let all = await res.json();
-
+                console.log(all);
                 setAllArtworks(all);
                 return all;
             } catch (err) {
@@ -66,7 +66,7 @@ function Scatterplot(props) {
         // const axesStyle = {stroke: "url(#boba_kiki_gradient)", strokeWidth: 1};
         
         let lineWeight = 4;
-        let outlineOffset = 0;
+        let outlineOffset = 0.5;
 
         return [
 
@@ -106,7 +106,7 @@ function Scatterplot(props) {
     }
 
     const getBackgroundElements = () => {
-        let spacing = 36;
+        let spacing = 32;
         let arr = [];
 
         let xColors = getMetricColors(xAxis);

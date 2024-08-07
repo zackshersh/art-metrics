@@ -22,6 +22,7 @@ module.exports = {
     async getArtwork({ params }, res) {
         const work = await Artwork.findById(params.id);
         console.log(work)
+        console.log("Getting, " + work.work_data.title)
 
         res.status(200).json(work);
     },
@@ -50,8 +51,8 @@ module.exports = {
             updateMetrics(artworkDoc);
         });
 
-
-        res.status(200);
+        console.log("RES 200")
+        res.status(200).json({message: "success"});
     },
 
 

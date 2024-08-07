@@ -15,18 +15,18 @@ function RangeSliderDisplay({value, valueName, minLabel, maxLabel, verticallyCom
 
     const getValueLabelStyles = (value) => {
         if(minValue == 0 && maxValue == 0){
-            return ""
+            return "text-md text-stone-500"
         } else if(value > 0){
-            return "text-xl md:text-xl font-bold"
+            return "text-lg md:text-lg font-bold"
         } else if (value == 0){
-            return "text-sm text-stone-500"
+            return "text-xs text-stone-500"
         }
     }
 
     return (
         <div style={{
             boxShadow: rangeInputShadow.boxShadow
-        }} className={`p-1 pl-2 mb-1 bg-stone-100 ${verticallyCompact ? "h-12" : "h-[60px]"} rounded-md  border border-stone-400 bg-stone-100 flex items-center *:mr-3`}>
+        }} className={`p-1 pl-2 mb-1 bg-stone-100 ${verticallyCompact ? "h-10" : "h-[60px]"} rounded-md  border border-stone-400 bg-stone-100 flex items-center *:mr-3`}>
             {/* SVG ICON */}
             <SvgDynamicIcon valueName={valueName} value={value} scaleFactor={verticallyCompact ? 0.7 : 1} />
             
