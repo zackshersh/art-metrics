@@ -14,8 +14,8 @@ function Scatterplot(props) {
 
     const [allArtworks, setAllArtworks] = useState();
 
-    const [width, setWidth] = useState(0);
-    const [height, setHeight] = useState(0);
+    const [width, setWidth] = useState(700);
+    const [height, setHeight] = useState(700);
 
     const [xAxis, setXAxis] = useState("fresh_smelly");
     const [yAxis, setYAxis] = useState("boba_kiki");
@@ -46,7 +46,7 @@ function Scatterplot(props) {
 
         window.addEventListener("resize", updateDimmensions)
 
-        updateDimmensions()
+        updateDimmensions();
     },[])
 
 
@@ -65,13 +65,13 @@ function Scatterplot(props) {
         // const axesStyle = {stroke: "black", strokeWidth: 1};
         // const axesStyle = {stroke: "url(#boba_kiki_gradient)", strokeWidth: 1};
         
-        let lineWeight = 4;
+        let lineWeight = 6;
         let outlineOffset = 0.5;
 
         return [
 
-            <rect key={0} x={margin.x} y={(height/2) - (lineWeight/2) - outlineOffset} width={width - margin.x*2} height={lineWeight + outlineOffset*2} fill={`black`}  className='no-transition'/>,
-            <rect key={1} x={(width/2) - (lineWeight/2) - outlineOffset} y={margin.y} width={lineWeight + outlineOffset*2} height={height - margin.y*2} fill={`black`}  className='no-transition'/>,
+            // <rect key={0} x={margin.x} y={(height/2) - (lineWeight/2) - outlineOffset} width={width - margin.x*2} height={lineWeight + outlineOffset*2} fill={`black`}  className='no-transition'/>,
+            // <rect key={1} x={(width/2) - (lineWeight/2) - outlineOffset} y={margin.y} width={lineWeight + outlineOffset*2} height={height - margin.y*2} fill={`black`}  className='no-transition'/>,
             
             // colorful lines
             <rect key={2} x={margin.x} y={(height/2) - (lineWeight/2)} width={width - margin.x*2} height={lineWeight} fill={`url(#${xAxis}_h_gradient)`}  className='no-transition'/>,
@@ -168,15 +168,13 @@ function Scatterplot(props) {
                 gridTemplateRows: "1fr min-content"
             }}>
                 <div className='SVG+BKG-IMG h-full py-3'>
-                        <div className='min-w-full h-full grow relative z-10 self-start' ref={contRef}>
-                            <svg className='absolute' id='scatterplot-svg' width={width} height={height} ref={svgRef}>
+                        <div className='min-w-full h-full grow relative self-start' ref={contRef}>
+                            <svg className='absolute z-20' id='scatterplot-svg' width={width} height={height} ref={svgRef}>
                                 
                                 <g>
                                     {getAxes()}
                                 </g>
-                                <g>
-                                    {getBackgroundElements()}
-                                </g>
+
                                 <g>
                                     { allArtworks != undefined ? allArtworks.map((work, i) => {
                                         
@@ -190,10 +188,15 @@ function Scatterplot(props) {
                                 </g>
                                 <ScatterPlotLinearGradients />
                             </svg>
+                            <svg className='absolute' id='scatterplot-svg' width={width} height={height}>
+                                <g>
+                                    {getBackgroundElements()}
+                                </g>
+                            </svg>
                             {getLabels()}
                         </div>
 
-                    <div style={{height: 'calc(100% - 135px)'}} className='w-full flex justify-center align-center absolute top-12 left-0'>
+                    <div style={{height: 'calc(100% - 135px)'}} className='w-full flex justify-center align-center absolute top-12 left-0 z-10'>
                             {backdropImg ? 
                                 <img style={{maxHeight: "70%", maxWidth: "80%", objectFit: "contain", margin: "auto auto", transform: "translateY(0vh)"}} className='z-0 w-full h-full' src={backdropImg} /> 
                                 : ''}

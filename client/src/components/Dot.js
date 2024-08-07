@@ -48,7 +48,7 @@ function Dot({work, pos, setBackdrop, setDetailsPopupData}) {
 
     const handleMouseDown = () => {
         if(active){
-            console.log("YES");
+
             setDetailsPopupData(work)
             // navigate(`/details/${work._id}`)
         }
@@ -71,7 +71,7 @@ function Dot({work, pos, setBackdrop, setDetailsPopupData}) {
                     <rect  x={pos.x - (mW/2)} y={pos.y - (mH/2)} width={mW} height={mH} fill='black'></rect>
                     <rect  x={pos.x - w/2} y={pos.y - h/2} width={w} height={h} fill='white' rx={rx}></rect>
                 </g>,
-            border: <rect onMouseDown={handleMouseDown} x={pos.x - w/2} y={pos.y - h/2} width={w} height={h} fill={active ? "black" : "black"} stroke='black' rx={rx}></rect>,
+            border: <rect onMouseDown={handleMouseDown} x={pos.x - w/2} y={pos.y - h/2} width={w} height={h} fill={active ? "white" : "black"} stroke='black' rx={rx}></rect>,
         }
     }
 
@@ -83,7 +83,7 @@ function Dot({work, pos, setBackdrop, setDetailsPopupData}) {
 
             {getMaskRect().border}
 
-            <text fill='white' onMouseDown={handleMouseDown} visibility={active ? "visible" : "hidden"} x={pos.x - (textDims.width/2)} y={pos.y + (textDims.height/3)} mask={`url(#${maskID})`} style={{font: textStyle}}>{labelString}</text>
+            <text fill='black' onMouseDown={handleMouseDown} visibility={active ? "visible" : "hidden"} x={pos.x - (textDims.width/2)} y={pos.y + (textDims.height/3)} mask={`url(#${maskID})`} style={{font: textStyle}}>{labelString}</text>
 
             <circle cx={pos.x} cy={pos.y} fill='rgba(0,0,0,0)' r={(radius+6).clamp(0,large+20)} data-work-data={workData} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onMouseDown={handleMouseDown}></circle>
         </g>

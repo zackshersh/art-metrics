@@ -10,7 +10,7 @@ function RangeDisplay({title, data}) {
 
 
     const [gradientColors, setGradientColors] = useState(getMetricColors(data.name));
-    console.log(getMetricColors(data.name));
+
     const markerW = 8;
     const markerH = 30;
 
@@ -24,11 +24,10 @@ function RangeDisplay({title, data}) {
         let bounds = contRef.current.getBoundingClientRect();
         setWidth(bounds.width);
         setHeight(bounds.height);
-        console.log(bounds)
+
     };
 
     const initialize = () => {
-        console.log(data);
 
         window.addEventListener("resize", () => {
             updateDimmensions()

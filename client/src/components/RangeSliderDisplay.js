@@ -34,7 +34,7 @@ function RangeSliderDisplay({value, valueName, minLabel, maxLabel, verticallyCom
     return (
         <div style={{
             boxShadow: rangeInputShadow.boxShadow
-        }} className={`p-1 pl-2 mb-1 bg-stone-100 ${verticallyCompact ? "h-10" : "h-[60px]"} rounded-md  border border-stone-400 bg-stone-100 flex items-center justify-between *:mr-3`}>
+        }} className={`p-1 pl-1 mb-1 bg-stone-100 ${verticallyCompact ? "h-10" : "h-[60px]"} rounded-md  border border-stone-400 bg-stone-100 flex items-center justify-between *:mr-3`}>
             {/* MAIN CONTENT CONTAINER */}
             <div className='flex items-center h-full'>
                 {/* SVG ICON */}

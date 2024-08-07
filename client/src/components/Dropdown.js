@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { capitalizeFirstLetter, getMetricColors, rgbArrayToCSS } from '../utils/utils';
+import PopupWrapper from './PopupWrapper';
+import BobaKikiExplanation from './BobaKikiExplanation';
 
 function Dropdown({title, options, handler, startingIndex=0, dropdownIndex}) {
 
@@ -12,6 +14,13 @@ function Dropdown({title, options, handler, startingIndex=0, dropdownIndex}) {
     const [maskTranslate, setMaskTranslate] = useState(0);
 
     const [optionHeight, setOptionHeight] = useState(0);
+
+
+    const [displayBobaKikiExlpanation, setDisplayBobaKikiExplanation] = useState(false);
+
+    const triggerBobaKikiExplanation = (e) => {
+        setDisplayBobaKikiExplanation(true);
+    }
 
 
     // const heightPerOption = 8;
@@ -73,11 +82,11 @@ function Dropdown({title, options, handler, startingIndex=0, dropdownIndex}) {
 
             let {start, end} = getMetricColors(option);
 
-            return(<p style={{
+            return(<div style={{
                 background: start ? `linear-gradient(90deg, ${rgbArrayToCSS(start,0.7)} 0%, ${rgbArrayToCSS(end,0.7)} 100%)` : "",
 
 
-            }} key={i} className={`relative z-20 text-sm flex items-center h-[2rem] border-red-500 px-1 ${i == selectedIndex ? expanded ? "bg-stone-200" : "" : expanded ? "bg-stone-50" : ""}`}
+            }} key={i} className={`relative z-20 text-sm flex items-center justify-between h-[2rem] border-red-500 px-1 ${i == selectedIndex ? expanded ? "bg-stone-200" : "" : expanded ? "bg-stone-50" : ""}`}
             onMouseDown={(e) => {
                     if(expanded){
                         setSelectedIndex(i);
@@ -88,7 +97,14 @@ function Dropdown({title, options, handler, startingIndex=0, dropdownIndex}) {
                     }
             }}>
                 <span className={`DROPDOWN-${dropdownIndex}`}>{tO(option)}</span>
-            </p>)
+
+                {/* INFO POPUP IF BOBA KIKI */}
+                { option == "boba_kiki" ? 
+                    <div className='w-5 h-5 border border-stone-700 p-1 flex justify-center items-center rounded-full cursor-pointer hover:opacity-60' onMouseDown={triggerBobaKikiExplanation}>
+                        <p className='text-stone-700 text-sm'>?</p>
+                    </div> : ""
+                }
+            </div>)
         })
     }
 
@@ -117,6 +133,10 @@ function Dropdown({title, options, handler, startingIndex=0, dropdownIndex}) {
             </div>
             <p className='pl-1 text-xs text-stone-600'>{title}</p>
             {/* <div onMouseDown={() => {setExpanded(false)}} className={`bg-[rgba(0,0,0,1)] w-[200vw] left-[-75vw] h-[200vh] absolute top-[-100vh] ${expanded ? "block" : "hidden"}`}></div> */}
+
+            <PopupWrapper active={displayBobaKikiExlpanation} setActive={setDisplayBobaKikiExplanation}>
+                <BobaKikiExplanation />
+            </PopupWrapper>
         </div>
     );
 }

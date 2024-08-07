@@ -13,7 +13,6 @@ function ArtDetailsPopup({artwork, setArtwork}) {
         for (const [key, value] of Object.entries(artwork.metrics)){
             let metric = value;
             metric.name = key;
-            console.log(key)
             arr.push(
                 <RangeDisplay key={i} title={key} data={metric} />
             )
@@ -33,7 +32,7 @@ function ArtDetailsPopup({artwork, setArtwork}) {
     return (
         <div data-cantriggerexit={true} className={`absolute w-full h-full top-0 bg-[rgba(0,0,0,0.4)] z-50 ${artwork ? "block" : "hidden"} flex justify-end`} onMouseDown={handleExit}>
             { artwork ?
-                <div className='p-3 py-8 sm:py-3 bg-stone-300 h-full w-full sm:w-auto sm:min-w-[500px] sm:max-w-[80vw] md:max-w-[50vw] overflow-y-scroll'>
+                <div className='p-3 py-8 sm:py-3 bg-stone-300 h-full w-full sm:w-auto sm:min-w-[500px] sm:max-w-[80vw] md:max-w-[50vw] overflow-y-auto'>
                     <p data-cantriggerexit={true} onMouseDown={handleExit} className='text-stone-600 mb-3 ml-3 sm:ml-0 cursor-pointer underline underline-offset-4 hover:text-stone-400 transition-colors'>← Back</p>
                     <div className='flex justify-center'>
                         <div>

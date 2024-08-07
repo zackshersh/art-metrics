@@ -43,6 +43,11 @@ function About(props) {
                     <p>Users are asked to rate artworks along these 3 axes, indicating where they feel that work falls on the spectrum. Your rating does not need to be based on any specific quality of the work, rather the general impression it evokes for <b className='font-black'>you</b>.</p>
                 </section>
                 <section className='mt-8'>
+                    <h3 className='pt-1 border-t border-black text-3xl font-bold'>Links, Contact, Etc...</h3>
+                    <p className='mt-5'>This project was built by <a href='https://zackshersh.github.io/' target='_blank' className='font-bold p-2 bg-stone-200 shadow shadow-stone-400 mx-1 hover:bg-stone-300 rounded-sm transition-colors'>Zack Hersh </a></p>
+                    <p className='mt-3'>You can find the source code for the project <a href='https://github.com/zackshersh/art-metrics' target='_blank' className='font-bold p-2 bg-stone-200 shadow shadow-stone-400 mx-1 hover:bg-stone-300 rounded-sm transition-colors'>here </a></p>
+                </section>
+                <section className='mt-8'>
                     <h3 className='pt-1 border-t border-black text-3xl font-bold'>Boba-Kiki Explained</h3>
                     <img className='w-[400px]' src={boba_kiki_img}></img>
                     <p className='mt-3'>The Boba-Kiki metric is in reference to the Boba-Kiki effect, which describes how humans have innate associations with certain words rather than words all being arbitrary. It was demonstrated in experiments where people were shown the two shapes seen above and asked which one was "Boba" and which was "Kiki". They consistently assigned "Boba" to the round shape and "Kiki" to the spiky shape.</p>
@@ -56,6 +61,7 @@ function About(props) {
                         <MetricExplanation metric={"sleepy_amped"} min={"Sleepy"} max={"Amped"} />
                     </div> */}
                 </section>
+
             </main>
         </div>
     );
