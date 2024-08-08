@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "proxy": "https://art-metrics-server-h1q61i1t6-zack-hershs-projects.vercel.app",
+  "proxy": "http://localhost:3050/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
