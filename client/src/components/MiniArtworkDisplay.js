@@ -40,18 +40,18 @@ function MiniArtworkDisplay({artwork, verticalLayout}) {
             </div>
             <div className='pt-3'>
                 <h5 className={`${verticalLayout ? "text-md" : "text-lg"} italic leading-snug`}>{artwork.work_data.title}</h5>
-                <h5 className={`${verticalLayout ? "text-sm" : ""}`}>{artwork.work_data.artist}</h5>
+                <h5 className={`${verticalLayout ? "text-sm" : ""}`}>{artwork.work_data.artist ? artwork.work_data.artist : artwork.work_data.origin}</h5>
             </div>
 
             { enlarged ? 
                 <div className={`absolute min-w-[100vw] min-h-[100vh] p-4 top-0 left-0 bg-[rgba(0,0,0,0.4)] flex justify-center items-center z-40 overflow-hidden`}
                     onMouseDown={() => {setEnlarged(false)}}
                 >
-                    <img style={{
-                        // transform: `translateX(${imageTranslate[0]}px)`
-                    }}
-                    className={`rounded-md ${touchMode ? "absolute object-cover": "object-contain max-h-[90vh] max-w-[90vw]"}`} 
-                    src={artwork.work_data.img_url}/>
+                    <div className='w-auto h-auto  relative'>
+                        <img className={`rounded-md ${touchMode ? "absolute object-cover": "object-contain max-h-[90vh] max-w-[90vw]"}`} src={artwork.work_data.img_url}/>
+                        <a href={artwork.work_data.link} target='_blank' className='absolute bottom-6 right-6 bg-stone-100 hover:bg-stone-200 py-1 px-2 rounded-md shadow shadow-stone-400 block'>More Info ↗</a>
+                    </div>
+
                 </div>: ""}
 
         </div>
