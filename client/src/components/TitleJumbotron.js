@@ -17,6 +17,8 @@ function TitleJumbotron(props) {
 
     const [numUpdates, setNumUpdates] = useState(0);
 
+    const [dataIsLoaded, setDataIsLoaded] = useState(false);
+
 
 
     useEffect(() => {
@@ -35,11 +37,33 @@ function TitleJumbotron(props) {
             return _array;
         }
 
+        const filterOutUnrated = (array) => {
+            return array.filter((artwork) => {
+                let { boba_kiki, fresh_smelly, sleepy_amped } = artwork.metrics; 
+
+                let bk = boba_kiki.valueHistory.length > 0;
+                let fs = fresh_smelly.valueHistory.length > 0;
+                let sa = sleepy_amped.valueHistory.length > 0;
+
+                if(!bk || !fs || !sa){
+                    return false
+                } else {
+                    return true
+                }
+            })
+        }
+
         const getAll = async () => {
             try {
                 let res = await getAllArtworks();
                 let all = await res.json();
+                console.log(all)
+                if(res.status == 200 && all.length > 0){
+                    setDataIsLoaded(true);
+                }
+
                 all = shuffle(all);
+                all = filterOutUnrated(all);
 
                 setAllArtworks(all);
 
@@ -85,28 +109,37 @@ function TitleJumbotron(props) {
             <div className='absolute bottom-0 w-full flex justify-center p-6 '>
                 <TitleJumbotronDataBar currentWork={allArtworks.length > 0 ? allArtworks[currentIndex] : undefined} />
             </div>
-            <div style={{
-                backgroundImage: allArtworks.length > 0 ? `url(${allArtworks[bkg1Index].work_data.img_url})` : "",
-                backgroundPosition: "center",
-                backgroundSize: "contain",
-                boxShadow: dropShadow,
-                opacity: numUpdates % 2 ? 0 : 1,
-                transitionProperty: "opacity",
-                transitionDuration: "1.5s"
-            }} className='rounded-lg  w-full h-full absolute top-0'>
 
-            </div>
-            <div style={{
-                backgroundImage: allArtworks.length > 0 ? `url(${allArtworks[bkg2Index].work_data.img_url})` : "",
-                backgroundPosition: "center",
-                backgroundSize: "contain",
-                boxShadow: dropShadow,
-                opacity: numUpdates % 2 ? 1 : 0,
-                transitionProperty: "opacity",
-                transitionDuration: "1.5s",
-            }} className='rounded-lg w-full h-full absolute top-0'>
+            {dataIsLoaded ? 
+                // IMAGE DISPLAYING DIVS
+                <div>            
+                    <div style={{
+                        backgroundImage: allArtworks.length > 0 ? `url(${allArtworks[bkg1Index].work_data.img_url})` : "",
+                        backgroundPosition: "center",
+                        backgroundSize: "contain",
+                        boxShadow: dropShadow,
+                        opacity: numUpdates % 2 ? 0 : 1,
+                        transitionProperty: "opacity",
+                        transitionDuration: "1.5s"
+                    }} className='rounded-lg  w-full h-full absolute top-0'>
+                    </div>
+                    <div style={{
+                        backgroundImage: allArtworks.length > 0 ? `url(${allArtworks[bkg2Index].work_data.img_url})` : "",
+                        backgroundPosition: "center",
+                        backgroundSize: "contain",
+                        boxShadow: dropShadow,
+                        opacity: numUpdates % 2 ? 1 : 0,
+                        transitionProperty: "opacity",
+                        transitionDuration: "1.5s",
+                    }} className='rounded-lg w-full h-full absolute top-0'>
+                    </div>
+                </div> :
 
-            </div>
+                // LOADING MESSAGE
+                <div className='w-full h-full flex justify-center items-center'>
+                    <p className='text-white'>Loading...</p>
+                </div>
+            }
         </div>
     );
 }
