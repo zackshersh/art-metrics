@@ -23,7 +23,7 @@ export const getArtwork = (id) => {
           'Content-Type': 'application/json',
         },
     })
-}
+} 
 
 export const submitRatings = async (id, ratings) => {
 
