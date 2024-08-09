@@ -22,6 +22,8 @@ function Scatterplot(props) {
 
     const [backdropImg, setBackdropImg] = useState(undefined);
 
+    const [dataIsLoaded, setDataIsLoaded] = useState(false);
+
     const [detailsPopupData, setDetailsPopupData] = useState();
 
     const svgRef = useRef();
@@ -32,6 +34,10 @@ function Scatterplot(props) {
             try {
                 let res = await getAllArtworks();
                 let all = await res.json();
+
+                if(res.status == 200 && all.length > 0){
+                    setDataIsLoaded(true);
+                }
                 console.log(all);
                 setAllArtworks(all);
                 return all;
@@ -168,32 +174,42 @@ function Scatterplot(props) {
                 gridTemplateRows: "1fr min-content"
             }}>
                 <div className='SVG+BKG-IMG h-full py-3'>
-                        <div className='min-w-full h-full grow relative self-start' ref={contRef}>
-                            <svg className='absolute z-20' id='scatterplot-svg' width={width} height={height} ref={svgRef}>
-                                
-                                <g>
-                                    {getAxes()}
-                                </g>
+                        <div className={`min-w-full h-full grow relative self-start`} ref={contRef}>
+                            {
+                                dataIsLoaded ? 
+                                    <div>
+                                        <svg className='absolute z-20' id='scatterplot-svg' width={width} height={height} ref={svgRef}>
+                                            
+                                            <g>
+                                                {getAxes()}
+                                            </g>
 
-                                <g>
-                                    { allArtworks != undefined ? allArtworks.map((work, i) => {
-                                        
-                                        let pos = {
-                                            x: x(work.metrics[xAxis].mean),
-                                            y: y(work.metrics[yAxis].mean)
-                                        }
-                                        
-                                        return (<Dot key={i} work={work} pos={pos} setBackdrop={setBackdropImg} setDetailsPopupData={setDetailsPopupData}/>)
-                                    }) : ""}
-                                </g>
-                                <ScatterPlotLinearGradients />
-                            </svg>
-                            <svg className='absolute' id='scatterplot-svg' width={width} height={height}>
-                                <g>
-                                    {getBackgroundElements()}
-                                </g>
-                            </svg>
-                            {getLabels()}
+                                            <g>
+                                                { allArtworks != undefined ? allArtworks.map((work, i) => {
+                                                    
+                                                    let pos = {
+                                                        x: x(work.metrics[xAxis].mean),
+                                                        y: y(work.metrics[yAxis].mean)
+                                                    }
+                                                    
+                                                    return (<Dot key={i} work={work} pos={pos} setBackdrop={setBackdropImg} setDetailsPopupData={setDetailsPopupData}/>)
+                                                }) : ""}
+                                            </g>
+                                            <ScatterPlotLinearGradients />
+                                        </svg>
+                                        <svg className='absolute' id='scatterplot-svg' width={width} height={height}>
+                                            <g>
+                                                {getBackgroundElements()}
+                                            </g>
+                                        </svg>
+                                        {getLabels()}
+                                    </div> : 
+                                    <div className='w-full h-full flex justify-center items-center'>
+                                        <p>Loading...</p>
+                                    </div>
+                            }
+ 
+
                         </div>
 
                     <div style={{height: 'calc(100% - 135px)'}} className='w-full flex justify-center align-center absolute top-12 left-0 z-10'>
