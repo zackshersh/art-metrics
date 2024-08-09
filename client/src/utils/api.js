@@ -1,5 +1,5 @@
 export const getAllArtworks = () => {
-    return fetch('/api/', {
+    return fetch('https://art-metrics-server.vercel.app/api/', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -8,7 +8,7 @@ export const getAllArtworks = () => {
 }
 
 export const getRandomArtwork = () => {
-    return fetch('/api/random', {
+    return fetch('https://art-metrics-server.vercel.app/api/random', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -17,7 +17,7 @@ export const getRandomArtwork = () => {
 }
 
 export const getArtwork = (id) => {
-    return fetch(`/api/${id}`, {
+    return fetch(`https://art-metrics-server.vercel.app/api/${id}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ export const getArtwork = (id) => {
 
 export const submitRatings = async (id, ratings) => {
 
-    const response = await fetch(`/api/${id}`, {
+    const response = await fetch(`https://art-metrics-server.vercel.app/api/${id}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
