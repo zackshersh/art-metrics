@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 
-// mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/artmetrics', {});
-mongoose.connect(process.env.MONGO_URI || 'mongodb+srv://zackshersh:clusterofoats@artmetricscluster.ubhzb.mongodb.net/?retryWrites=true&w=majority&appName=ArtMetricsCluster', {});
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/artmetrics', {});
+
+// TO SEED DATABASE MANUALLY ON MONGODB ATLAS, PASTE MONGO URI IN _______
+// mongoose.connect(process.env.MONGO_URI || '_____', {});
 
 module.exports = mongoose.connection;
