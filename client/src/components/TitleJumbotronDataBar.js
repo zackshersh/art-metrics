@@ -8,6 +8,7 @@ function TitleJumbotronDataBar({currentWork}) {
 
     const [artworkTitle, setArtworkTitle] = useState("");
     const [artist, setArtist] = useState("");
+    const [origin, setOrigin] = useState("");
 
     const [currentValues, setCurrentValues] = useState({
         boba_kiki: 0,
@@ -49,7 +50,10 @@ function TitleJumbotronDataBar({currentWork}) {
     const update = () => {
 
         updateValues();
+
         setArtist(currentWork.work_data.artist);
+        setOrigin(currentWork.work_data.origin);
+
         updateArtworkTitle();
     }
 
@@ -76,8 +80,7 @@ function TitleJumbotronDataBar({currentWork}) {
                 <div className='pl-3 *:text-neutral-200'>
                     {/* <h3 className='italic text font-bold'>{allArtworks.length > 0 ? allArtworks[currentIndex].work_data.title : ""}</h3> */}
                     <h3 className='italic text font-bold'>{artworkTitle}</h3>
-
-                    <h5 className='text-sm mt-[-4px]'>{artist}</h5>
+                    <h5 className='text-sm mt-[-4px]'>{artist || origin}</h5>
                 </div>
                 <div className='flex flex-wrap *:mx-3 mt-3 sm:mt-0'>
                     <TitleJumbotronMetricDisplay targetValue={ currentValues.boba_kiki } minLabel={"boba"} maxLabel={"kiki"} />
