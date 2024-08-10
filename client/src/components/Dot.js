@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { getElemDimmensions } from '../utils/utils';
 
 import { useNavigate } from 'react-router-dom';
+import { isMobile } from 'react-device-detect';
 
 function Dot({work, pos, setBackdrop, setDetailsPopupData}) {
 
@@ -47,11 +48,28 @@ function Dot({work, pos, setBackdrop, setDetailsPopupData}) {
     }
 
     const handleMouseDown = () => {
-        if(active){
+        console.log(isMobile)
+        // special mobile touch behavior
+            // if on mobile, touching once will set to active and have art preview
+            // if already active, then will set popupdata
+        if(isMobile){
 
-            setDetailsPopupData(work)
-            // navigate(`/details/${work._id}`)
+            if(!active){
+                setActive(true);
+            } else {
+                setDetailsPopupData(work);
+            }
+
+        } else {
+            if(active){
+                setDetailsPopupData(work)
+                // navigate(`/details/${work._id}`)
+            }      
         }
+    }
+
+    const handleTouchStart = () => {
+        // setActive(true);
     }
 
     const getMaskRect = () => {
@@ -85,7 +103,7 @@ function Dot({work, pos, setBackdrop, setDetailsPopupData}) {
 
             <text fill='black' onMouseDown={handleMouseDown} visibility={active ? "visible" : "hidden"} x={pos.x - (textDims.width/2)} y={pos.y + (textDims.height/3)} mask={`url(#${maskID})`} style={{font: textStyle}}>{labelString}</text>
 
-            <circle cx={pos.x} cy={pos.y} fill='rgba(0,0,0,0)' r={(radius+6).clamp(0,large+20)} data-work-data={workData} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onMouseDown={handleMouseDown}></circle>
+            <circle cx={pos.x} cy={pos.y} fill='rgba(0,0,0,0)' r={(radius+6).clamp(0,large+20)} data-work-data={workData} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onMouseDown={handleMouseDown} onTouchStart={handleTouchStart}></circle>
         </g>
     );
 }
