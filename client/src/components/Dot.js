@@ -54,22 +54,23 @@ function Dot({work, pos, setBackdrop, setDetailsPopupData}) {
             // if already active, then will set popupdata
         if(isMobile){
 
-            if(!active){
-                setActive(true);
-            } else {
-                setDetailsPopupData(work);
-            }
-
         } else {
+
             if(active){
                 setDetailsPopupData(work)
                 // navigate(`/details/${work._id}`)
-            }      
+            }     
+
         }
     }
 
     const handleTouchStart = () => {
         // setActive(true);
+        if(!active){
+            setActive(true);
+        } else {
+            setDetailsPopupData(work);
+        }
     }
 
     const getMaskRect = () => {
