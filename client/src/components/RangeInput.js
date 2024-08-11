@@ -64,7 +64,7 @@ function RangeInput({name, value, setValue, minLabel, maxLabel, min=-1, max=1, i
     
     return (
 
-            <div className='mb-2'>
+            <div className='mb-1'>
                 <RangeSliderDisplay valueName={name} value={value} minLabel={minLabel} maxLabel={maxLabel} verticallyCompact={verticallyCompact}/>
                 <RangeInputSlider2 gradientColors={colors} min={-1} max={1} value={value} handler={handleChange}/>
             </div>

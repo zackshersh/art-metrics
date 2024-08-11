@@ -62,7 +62,5 @@ export function interpolateSvgs(path1, path2, t){
 
     let str = compileSvg(interpolated);
 
-
-
     return str;
 }
