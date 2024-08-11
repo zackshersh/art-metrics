@@ -10,6 +10,19 @@ function RangeSliderDisplay({value, valueName, minLabel, maxLabel, verticallyCom
     const [minValue, setMinValue] = useState(0);
     const [maxValue, setMaxValue] = useState(0);
 
+    // const [_value, set_Value] = useState(value);
+
+    // // buffers state change from external value
+    //     // "value" updates anytime any of the values is set for any of the ratings
+    //     // don't want to do more svg rerenders than necessary because it is very slow
+    //     // internal "_value" only updates if "value" is different than last time
+    // useEffect(() => {
+    //     // if(value == _value){
+    //         console.log(valueName, "-----", value, _value)
+    //         set_Value(value);
+    //     // }
+    // }, [value]);
+
     const [displayBobaKikiExlpanation, setDisplayBobaKikiExplanation] = useState(false);
 
     const triggerBobaKikiExplanation = () => {
@@ -17,8 +30,10 @@ function RangeSliderDisplay({value, valueName, minLabel, maxLabel, verticallyCom
     }
 
     useEffect(() => {
+
         setMinValue(clamp(value,-1,0)*-100);
         setMaxValue(clamp(value,0,1)*100);
+
     }, [value])
 
     const getValueLabelStyles = (value) => {

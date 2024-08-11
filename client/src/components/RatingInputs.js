@@ -8,8 +8,7 @@ import Nav from './Nav';
 
 function RatingInputs({userRatings, setUserRatings, canSubmit, setCanSubmit, submitHandler, skipHandler, parentReset, sizingStyles, verticalLayout}) {
 
-    // const [boba_kiki, setBoba_Kiki] = useState(0);
-    // const [fresh_smelly, setFresh_Smelly] = useState(0);
+
 
 
 
@@ -21,9 +20,25 @@ function RatingInputs({userRatings, setUserRatings, canSubmit, setCanSubmit, sub
         // }
     }
 
+    const [boba_kiki, setBoba_Kiki] = useState(0);
+    const [fresh_smelly, setFresh_Smelly] = useState(0);
+    const [sleepy_amped, setSleepy_Amped] = useState(0);
+
     const setRatingValue = (value, name) => {
         let updated = {...userRatings};
         updated[name] = value;
+
+        switch(name){
+            case "boba_kiki":
+                setBoba_Kiki(value);
+                break;
+            case "fresh_smelly":
+                setFresh_Smelly(value);
+                break;
+            case "sleepy_amped":
+                setSleepy_Amped(value);
+                break;
+        }
 
         if(value != 0){
             let index = updated.valuesSet.indexOf(name);
@@ -59,11 +74,11 @@ function RatingInputs({userRatings, setUserRatings, canSubmit, setCanSubmit, sub
                 height:  "auto"}} 
             className={``}>
 
-                <RangeInput name={"boba_kiki"} minLabel={"Boba"} maxLabel={"Kiki"} value={userRatings.boba_kiki} setValue={setRatingValue} incrementRatedCount={incrementRatedCount} verticalLayout={verticalLayout} verticallyCompact={verticalLayout}/>
+                <RangeInput name={"boba_kiki"} minLabel={"Boba"} maxLabel={"Kiki"} value={boba_kiki} setValue={setRatingValue} incrementRatedCount={incrementRatedCount} verticalLayout={verticalLayout} verticallyCompact={verticalLayout}/>
 
-                <RangeInput name={"fresh_smelly"} minLabel={"Fresh"} maxLabel={"Smelly"} value={userRatings.fresh_smelly} setValue={setRatingValue} incrementRatedCount={incrementRatedCount} verticalLayout={verticalLayout} verticallyCompact={verticalLayout}/>
+                <RangeInput name={"fresh_smelly"} minLabel={"Fresh"} maxLabel={"Smelly"} value={fresh_smelly} setValue={setRatingValue} incrementRatedCount={incrementRatedCount} verticalLayout={verticalLayout} verticallyCompact={verticalLayout}/>
 
-                <RangeInput name={"sleepy_amped"} minLabel={"Sleepy"} maxLabel={"Amped"} value={userRatings.sleepy_amped} setValue={setRatingValue} incrementRatedCount={incrementRatedCount} verticalLayout={verticalLayout} verticallyCompact={verticalLayout}/>
+                <RangeInput name={"sleepy_amped"} minLabel={"Sleepy"} maxLabel={"Amped"} value={sleepy_amped} setValue={setRatingValue} incrementRatedCount={incrementRatedCount} verticalLayout={verticalLayout} verticallyCompact={verticalLayout}/>
 
             </div>
 

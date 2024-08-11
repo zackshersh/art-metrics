@@ -13,25 +13,19 @@ function SvgDynamicIcon({valueName, value, scaleFactor, colorExagerationFactor=0
     const [t, setT] = useState(0);
 
     const [minColor, setMinColor] = useState(getMetricColors(valueName).start)
-    const [maxColor, setMaxColor] = useState(getMetricColors(valueName).end)
+    const [maxColor, setMaxColor] = useState(getMetricColors(valueName).end);
 
 
+    
     useEffect(() => {
-
-    },[])
-
-
-    // useEffect(() => {
-        
-    //     setPathD(interpolated);
-    // }, [path1, path2, t]);
-
-    useEffect(() => {
+        // console.log(valueName)
         setT(scale(value, -1, 1, 0, 1));
-    }, [value]);
+    }, [value])
 
 
     const generatePaths = () => {
+        // console.log(valueName, scaleFactor)
+        performance.mark("generate_paths_start")
         let metricPaths = getPathsForValueName(valueName);
 
         if(Array.isArray(metricPaths.start)){
@@ -40,6 +34,13 @@ function SvgDynamicIcon({valueName, value, scaleFactor, colorExagerationFactor=0
                 let interpolated = singlePath(metricPaths.start[i], metricPaths.end[i], t);
                 arr.push(<path key={i} fill={`rgb(${colorLerp(minColor, maxColor, t)})`} d={interpolated}></path>);
             }
+            performance.mark("generate_paths_end");
+            const measure = performance.measure(
+                "generate_paths",
+                "generate_paths_start",
+                "generate_paths_end")
+
+            // console.log(valueName + " " + measure.duration + "ms")
             return arr;
         } else {
             let interpolated = singlePath(metricPaths.start, metricPaths.end, t);
@@ -53,9 +54,17 @@ function SvgDynamicIcon({valueName, value, scaleFactor, colorExagerationFactor=0
                 fill = "none";
                 stroke = c;
             }
+            performance.mark("generate_paths_end");
+            const measure = performance.measure(
+                "generate_paths",
+                "generate_paths_start",
+                "generate_paths_end")
 
+            // console.log(valueName + " " + measure.duration + "ms")
             return <path strokeWidth={3} stroke={stroke} fill={fill} d={interpolated}></path>
         }
+
+
     }
 
     const singlePath = (path1, path2) => {

@@ -34,7 +34,6 @@ function RangeInput({name, value, setValue, minLabel, maxLabel, min=-1, max=1, i
 
 
 
-
     const colors = useMemo(() => {
         return getMetricColors(name);
     })
@@ -43,14 +42,13 @@ function RangeInput({name, value, setValue, minLabel, maxLabel, min=-1, max=1, i
     const handleChange = (val) => {
 
         setValue(val, name);
-
         // ratedCount has been reset but hasInteracted hasn't yet
         if(!hasInteracted){
-
             setHasInteracted(true);
-            incrementRatedCount();
+            // incrementRatedCount();
         }
     }
+    
 
     useEffect(() => {
 
@@ -98,17 +96,11 @@ function RangeInput({name, value, setValue, minLabel, maxLabel, min=-1, max=1, i
 
     
     return (
-        //<div>
 
             <div className='mb-2'>
                 <RangeSliderDisplay valueName={name} value={value} minLabel={minLabel} maxLabel={maxLabel} verticallyCompact={verticallyCompact}/>
                 <RangeInputSlider2 gradientColors={colors} min={-1} max={1} value={value} handler={handleChange}/>
-                {/* <div className='flex justify-between'>
-                    <RangeSliderLabel value={startPercent} label={minLabel} extraStyles={"text-start"} />
-                    <RangeSliderLabel value={endPercent} label={maxLabel} extraStyles={"text-end"} />
-                </div> */}
             </div>
-        //</div>
     )
 }
 
