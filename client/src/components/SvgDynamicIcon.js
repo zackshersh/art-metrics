@@ -41,7 +41,6 @@ function SvgDynamicIcon({valueName, value, scaleFactor, colorExagerationFactor=0
     }
 
     const generatePaths = (t) => {
-        console.log(valueName, scaleFactor)
         performance.mark("generate_paths_start")
         let metricPaths = getPathsForValueName(valueName);
 
@@ -57,7 +56,7 @@ function SvgDynamicIcon({valueName, value, scaleFactor, colorExagerationFactor=0
                 "generate_paths_start",
                 "generate_paths_end")
 
-            // console.log(valueName + " " + measure.duration + "ms")
+            // console.log(measure.duration + "ms")
             return arr;
         } else {
             let interpolated = singlePath(metricPaths.start, metricPaths.end, t);
@@ -77,7 +76,7 @@ function SvgDynamicIcon({valueName, value, scaleFactor, colorExagerationFactor=0
                 "generate_paths_start",
                 "generate_paths_end")
 
-            // console.log(valueName + " " + measure.duration + "ms")
+            // console.log(measure.duration + "ms")
             return <path strokeWidth={3} stroke={stroke} fill={fill} d={interpolated}></path>
         }
     }
@@ -98,7 +97,6 @@ function SvgDynamicIcon({valueName, value, scaleFactor, colorExagerationFactor=0
             <svg style={{
                 transform: `scale(${scaleFactor})`
             }} width={sideLength} height={sideLength} className=''>
-                {/* {generatePaths()} */}
                 {paths}
             </svg>
         </div>

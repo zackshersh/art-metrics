@@ -3,12 +3,14 @@ import { lerp } from "./utils";
 export function parseSvg(svg){
     let arr = [];
     let currentToken = "";
-    svg.split("").forEach((char, i) => {
+
+    let charArray = svg.split("");
+    charArray.forEach((char, i) => {
         let isInt = !isNaN(char);
 
         if((isInt || char == "." || char == "-") && char != " "){
             currentToken += char; 
-            if(i == svg.split("").length-1){
+            if(i == charArray.length-1){
                 arr.push(parseFloat(currentToken))
             }
 
