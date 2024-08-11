@@ -61,39 +61,6 @@ function RangeInput({name, value, setValue, minLabel, maxLabel, min=-1, max=1, i
 
 
     },[value])
-
-    const vertical = () => {
-        return (
-            <div ref={contRef}
-            style={{
-                display: "grid",
-                gridTemplateRows: `1fr ${sliderLength}px 1fr`,
-                justifyItems: "center",
-                alignItems: "center",
-                maxHeight: "100%"
-            }}
-            className={`h-full`}>
-                {/* <div ref={contRef} className={`flex flex-col align-middle items-center p-2 border border-red-500 ${verticalLayout ? "h-1/3" : "h-full"}`}> */}
-                <RangeSliderLabel value={startPercent} label={minLabel} extraStyles={"self-end mb-2 text-center"} />
-                {/* <RangeInputSlider handler={handleChange} min={-1} max={1} gradientColors={colors} fullHeight={sliderHeight}/> */}
-                <RangeInputSlider2 gradientColors={colors} min={-1} max={1} handler={handleChange} vertical/>
-                <RangeSliderLabel value={endPercent} label={maxLabel} extraStyles={"self-start mt-2 text-center"} />
-            </div> 
-        )
-    }
-
-    const horizontal = () => {
-        return (
-            <div className='mb-12'>
-                <RangeInputSlider2 gradientColors={colors} min={-1} max={1} handler={handleChange}/>
-                <div className='flex justify-between'>
-                    <RangeSliderLabel value={startPercent} label={minLabel} extraStyles={"text-start"} />
-                    <RangeSliderLabel value={endPercent} label={maxLabel} extraStyles={"text-end"} />
-                </div>
-            </div>
-        )
-    }
-
     
     return (
 

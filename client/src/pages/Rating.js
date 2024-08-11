@@ -17,16 +17,30 @@ function Rating(props) {
 
     const currentWork = () => {console.log(allArtworks, currentWorkIndex) ; return allArtworks[currentWorkIndex]};
 
-    const userRatingsDefault = {
-        boba_kiki: 0,
-        fresh_smelly: 0,
-        sleepy_amped: 0,
-        // tracks which values have been set yet
-        // when a input is interacted with for the first time, it pushes its name into this array
-            // canSubmit only set when the length of the array is equal to # of inputs
-        valuesSet: []
+    // const userRatingsDefault = {
+    //     boba_kiki: 0,
+    //     fresh_smelly: 0,
+    //     sleepy_amped: 0,
+    //     // tracks which values have been set yet
+    //     // when a input is interacted with for the first time, it pushes its name into this array
+    //         // canSubmit only set when the length of the array is equal to # of inputs
+    //     valuesSet: []
+    // }
+    // const [userRatings, setUserRatings] = useState(userRatingsDefault);
+
+    const [boba_kiki, setBoba_Kiki] = useState(0);
+    const [fresh_smelly, setFresh_Smelly] = useState(0);
+    const [sleepy_amped, setSleepy_Amped] = useState(0);
+    const [valuesSet, setValuesSet] = useState([]);
+
+    const addNewValueSet = (valueName) => {
+        let index = valuesSet.indexOf(valueName);
+        if(index == -1){
+            let newArr = [...valuesSet, valueName];
+            // updated.valuesSet.push(name);
+            setValuesSet(newArr);
+        }
     }
-    const [userRatings, setUserRatings] = useState(userRatingsDefault);
  
     const [canSubmit, setCanSubmit] = useState(false);
 
@@ -83,17 +97,26 @@ function Rating(props) {
 
     const reset = () => {
         console.log("RESET")
-        setUserRatings({...userRatingsDefault});
+        // setUserRatings({...userRatingsDefault});
+        setBoba_Kiki(0);
+        setFresh_Smelly(0);
+        setSleepy_Amped(0);
+        setValuesSet([]);
     }
 
     // *****************
     // ADVANCING TO NEXT
     // *****************
     const handleSubmit = async () => {
-        console.log(userRatings)
-        let ratingsCopy = {...userRatings};
-        delete ratingsCopy.valuesSet;
-        submitRatings(currentWork()._id, ratingsCopy);
+        // console.log(userRatings)
+        // let ratingsCopy = {...userRatings};
+        // delete ratingsCopy.valuesSet;
+        let ratings = {
+            boba_kiki: boba_kiki,
+            fresh_smelly: fresh_smelly,
+            sleepy_amped: sleepy_amped
+        }
+        submitRatings(currentWork()._id, ratings);
 
         addToVisited(currentWork()._id);
 
@@ -143,7 +166,7 @@ function Rating(props) {
 
         try {
             const submitThreshold = allArtworks ? Object.keys(allArtworks[currentWorkIndex].metrics).length : 1000;
-            return userRatings.valuesSet.length >= submitThreshold
+            return valuesSet.length >= submitThreshold
 
         } catch (error) {
             console.error(error)            
@@ -201,7 +224,15 @@ function Rating(props) {
             }}
             className={`bg-stone-300 p-2 flex ${verticalLayout ? "flex-col-reverse " : "flex-row items-center"}`}>
 
-                <RatingInputs userRatings={userRatings} setUserRatings={setUserRatings} canSubmit={canSubmit} setCanSubmit={setCanSubmit} submitHandler={handleSubmit} skipHandler={handleSkip} sizingStyles={verticalLayout ? "w-full" : "w-2/5"} verticalLayout={verticalLayout}/>
+                {/* <RatingInputs userRatings={userRatings} setUserRatings={setUserRatings} canSubmit={canSubmit} setCanSubmit={setCanSubmit} submitHandler={handleSubmit} skipHandler={handleSkip} sizingStyles={verticalLayout ? "w-full" : "w-2/5"} verticalLayout={verticalLayout}/> */}
+                <RatingInputs ratingsState={{
+                    boba_kiki: boba_kiki,
+                    setBoba_Kiki: setBoba_Kiki,
+                    fresh_smelly: fresh_smelly,
+                    setFresh_Smelly: setFresh_Smelly,
+                    sleepy_amped: sleepy_amped,
+                    setSleepy_Amped: setSleepy_Amped
+                }} addNewValueSet={addNewValueSet} canSubmit={canSubmit} setCanSubmit={setCanSubmit} submitHandler={handleSubmit} skipHandler={handleSkip} sizingStyles={verticalLayout ? "w-full" : "w-2/5"} verticalLayout={verticalLayout}/>
 
 
                 <div className='SPACER pl-3'> </div>

@@ -6,9 +6,14 @@ import { Link } from 'react-router-dom';
 
 import Nav from './Nav';
 
-function RatingInputs({userRatings, setUserRatings, canSubmit, setCanSubmit, submitHandler, skipHandler, parentReset, sizingStyles, verticalLayout}) {
+function RatingInputs({ratingsState, addNewValueSet, canSubmit, setCanSubmit, submitHandler, skipHandler, parentReset, sizingStyles, verticalLayout}) {
 
-
+    const { boba_kiki,
+        setBoba_Kiki,
+        fresh_smelly,
+        setFresh_Smelly,
+        sleepy_amped,
+        setSleepy_Amped} = ratingsState;
 
 
 
@@ -20,13 +25,11 @@ function RatingInputs({userRatings, setUserRatings, canSubmit, setCanSubmit, sub
         // }
     }
 
-    const [boba_kiki, setBoba_Kiki] = useState(0);
-    const [fresh_smelly, setFresh_Smelly] = useState(0);
-    const [sleepy_amped, setSleepy_Amped] = useState(0);
+
 
     const setRatingValue = (value, name) => {
-        let updated = {...userRatings};
-        updated[name] = value;
+        // let updated = {...userRatings};
+        // updated[name] = value;
 
         switch(name){
             case "boba_kiki":
@@ -40,14 +43,16 @@ function RatingInputs({userRatings, setUserRatings, canSubmit, setCanSubmit, sub
                 break;
         }
 
-        if(value != 0){
-            let index = updated.valuesSet.indexOf(name);
-            if(index == -1){
-                updated.valuesSet.push(name);
-            }
-        }
+        addNewValueSet(name);
+
+        // if(value != 0){
+        //     let index = updated.valuesSet.indexOf(name);
+        //     if(index == -1){
+        //         updated.valuesSet.push(name);
+        //     }
+        // }
         
-        setUserRatings(updated);
+        // setUserRatings(updated);
     }
 
 

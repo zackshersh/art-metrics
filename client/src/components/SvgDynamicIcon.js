@@ -24,7 +24,7 @@ function SvgDynamicIcon({valueName, value, scaleFactor, colorExagerationFactor=0
 
 
     const generatePaths = () => {
-        // console.log(valueName, scaleFactor)
+        console.log(valueName, scaleFactor)
         performance.mark("generate_paths_start")
         let metricPaths = getPathsForValueName(valueName);
 
