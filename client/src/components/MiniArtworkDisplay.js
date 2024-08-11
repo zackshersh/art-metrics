@@ -39,8 +39,8 @@ function MiniArtworkDisplay({artwork, verticalLayout}) {
                 <p className='absolute top-2 left-2 rounded-md bg-stone-200 py-1 px-2 text-sm opacity-55 pointer-events-none'>+ Click to Enlarge</p>
             </div>
             <div className='pt-3'>
-                <h5 className={`${verticalLayout ? "text-md" : "text-lg"} italic leading-snug`}>{artwork.work_data.title}</h5>
-                <h5 className={`${verticalLayout ? "text-sm" : ""}`}>{artwork.work_data.artist ? artwork.work_data.artist : artwork.work_data.origin}</h5>
+                <h5 className={`${verticalLayout ? "text-md" : "text-lg"} italic leading-snug text-white`}>{artwork.work_data.title}</h5>
+                <h5 className={`${verticalLayout ? "text-sm" : ""} text-white`}>{artwork.work_data.artist ? artwork.work_data.artist : artwork.work_data.origin}</h5>
             </div>
 
             { enlarged ? 

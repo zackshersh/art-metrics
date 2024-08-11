@@ -88,7 +88,7 @@ function RatingInputs({ratingsState, addNewValueSet, canSubmit, setCanSubmit, su
             </div>
 
             <div className={`${verticalLayout ? "flex" : ""}`}>
-                <Button handler={submitHandler} label={"Submit"} active={canSubmit} importance='primary' size='lg' sizingStyles={verticalLayout ? "w-3/5 mr-4" : "w-full"}/>
+                <Button handler={submitHandler} label={"Next"} active={canSubmit} importance='primary' size='lg' sizingStyles={verticalLayout ? "w-3/5 mr-4" : "w-full"}/>
                 <Button handler={skipHandler} label={"Skip"} active={true} importance='secondary' sizingStyles={verticalLayout ? "w-2/5" : "w-full"}/>
             </div>
         </div>

@@ -235,9 +235,9 @@ function Rating(props) {
                 }} addNewValueSet={addNewValueSet} canSubmit={canSubmit} setCanSubmit={setCanSubmit} submitHandler={handleSubmit} skipHandler={handleSkip} sizingStyles={verticalLayout ? "w-full" : "w-2/5"} verticalLayout={verticalLayout}/>
 
 
-                <div className='SPACER pl-3'> </div>
-                <div className={`${verticalLayout ? "w-full": "w-3/5"} h-full `}>
-                    <div className='flex justify-center items-center h-full p-3 w-full rounded-lg'>
+                <div className='SPACER pl-2'> </div>
+                <div className={`${verticalLayout ? "w-full": "w-3/5"} h-full py-1 px-4 md:py-0 md:px-1`}>
+                    <div className='flex justify-center items-center h-full p-3 w-full rounded-lg bg-neutral-900 shadow-inner shadow-black'>
                         {checkIfValidCurrentWork() ? <MiniArtworkDisplay artwork={allArtworks[currentWorkIndex]} verticalLayout={verticalLayout}/> : "No Artworks Left"}
                     </div>
                 </div>
