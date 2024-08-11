@@ -11,19 +11,36 @@ function SvgDynamicIcon({valueName, value, scaleFactor, colorExagerationFactor=0
     // const [pathD, setPathD] = useState("");
 
     const [t, setT] = useState(0);
+    const [paths, setPaths] = useState();
 
     const [minColor, setMinColor] = useState(getMetricColors(valueName).start)
     const [maxColor, setMaxColor] = useState(getMetricColors(valueName).end);
 
+    const [_value, set_Value] = useState(value);
 
+
+
+    useEffect(() => {
+        updatePaths(0.5);
+    }, [])
     
     useEffect(() => {
-        // console.log(valueName)
-        setT(scale(value, -1, 1, 0, 1));
-    }, [value])
+        // console.log(valueName);
+        if(_value != value){
+            set_Value(value);
 
+            let newT = scale(value, -1, 1, 0, 1);
+            setT(newT);
+            updatePaths(newT)
+        }
+    }, [value]);
 
-    const generatePaths = () => {
+    const updatePaths = (t) => {
+        let paths = generatePaths(t);
+        setPaths(paths);
+    }
+
+    const generatePaths = (t) => {
         console.log(valueName, scaleFactor)
         performance.mark("generate_paths_start")
         let metricPaths = getPathsForValueName(valueName);
@@ -63,8 +80,6 @@ function SvgDynamicIcon({valueName, value, scaleFactor, colorExagerationFactor=0
             // console.log(valueName + " " + measure.duration + "ms")
             return <path strokeWidth={3} stroke={stroke} fill={fill} d={interpolated}></path>
         }
-
-
     }
 
     const singlePath = (path1, path2) => {
@@ -83,7 +98,8 @@ function SvgDynamicIcon({valueName, value, scaleFactor, colorExagerationFactor=0
             <svg style={{
                 transform: `scale(${scaleFactor})`
             }} width={sideLength} height={sideLength} className=''>
-                {generatePaths()}
+                {/* {generatePaths()} */}
+                {paths}
             </svg>
         </div>
     ); 
