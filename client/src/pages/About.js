@@ -4,6 +4,7 @@ import { getMetricColors, rgbArrayToCSS } from '../utils/utils';
 import { dropShadow, smallDropShadow, softDropShadow } from '../components/boxShadowStyles';
 
 import boba_kiki_img from "../assets/images/boba-kiki.png"
+import BobaKikiExplanation from '../components/BobaKikiExplanation';
 
 
 function MetricExplanation({metric, min, max, text}){
@@ -35,12 +36,12 @@ function About(props) {
         <div>
             <Nav />
             <main className='p-6'>
-                {/* <h1 className='text-7xl font-bold'>Subjective Metrics</h1> */}
+                {/* <h1 className='text-7xl font-bold'>Expressive Metrics</h1> */}
                 <section className='mt-4 *:mt-3'>
                     <h3 className='pt-1 border-t border-black text-3xl font-bold'>What is this?</h3>
-                    <p>Subjective Metrics measures the unquantifiable qualities of works of art. It positions each work of art along 3 axes: from <b className='font-black'>Boba</b> → <b className='font-black'>Kiki</b>, from <b className='font-black'>Fresh</b> → <b className='font-black'>Smelly</b>, and from <b className='font-black'>Sleepy</b> → <b className='font-black'>Amped</b>.</p>
+                    <p>Expressive Metrics measures the unquantifiable qualities of works of art. It positions each work of art along 3 axes: from <b className='font-black'>Boba</b> → <b className='font-black'>Kiki</b>, from <b className='font-black'>Fresh</b> → <b className='font-black'>Smelly</b>, and from <b className='font-black'>Sleepy</b> → <b className='font-black'>Amped</b>.</p>
 
-                    <p>Users are asked to rate artworks along these 3 axes, indicating where they feel that work falls on the spectrum. Your rating does not need to be based on any specific quality of the work, rather the general impression it evokes for <b className='font-black'>you</b>.</p>
+                    <p>Users are asked to rate artworks along these 3 axes, indicating where they feel each work falls on the spectrum. Your rating does not need to be based on any specific quality of the work, rather the general impression it evokes for <b className='font-black'>you</b>.</p>
                 </section>
                 <section className='mt-8'>
                     <h3 className='pt-1 border-t border-black text-3xl font-bold'>Links, Contact, Etc...</h3>
@@ -48,18 +49,7 @@ function About(props) {
                     <p className='mt-3'>You can find the source code for the project <a href='https://github.com/zackshersh/art-metrics' target='_blank' className='font-bold p-2 bg-stone-200 shadow shadow-stone-400 mx-1 hover:bg-stone-300 rounded-sm transition-colors'>here </a></p>
                 </section>
                 <section className='mt-8'>
-                    <h3 className='pt-1 border-t border-black text-3xl font-bold'>Boba-Kiki Explained</h3>
-                    <img className='w-[400px]' src={boba_kiki_img}></img>
-                    <p className='mt-3'>The Boba-Kiki metric is in reference to the Boba-Kiki effect, which describes how humans have innate associations with certain words rather than words all being arbitrary. It was demonstrated in experiments where people were shown the two shapes seen above and asked which one was "Boba" and which was "Kiki". They consistently assigned "Boba" to the round shape and "Kiki" to the spiky shape.</p>
-                    <p className='mt-3'>The goal of using Boba-Kiki, rather than something like Round-Spiky, is to describe more than just the forms and shapes of a work. Just like Boba and Kiki are associated with round and spiky shapes respectively, what subject matter or emotions are Boba and which are Kiki?</p>
-                    <p className='mt-3 text-lg font-bold'>You see a mother porcupine lovingly caring for her child, is that Boba or Kiki?</p>
-                    {/* <div className='flex flex-wrap justify-between'>
-                        <MetricExplanation metric={"boba_kiki"} min={"Boba"} max={"Kiki"} text={
-                            `Boba and Kiki are in reference to the Boba/Kiki effect, which was first discovered in a study that when given a list of nonsensical words and arbitrary shapes, subjects would consistently assign words like "Kiki" to sharp or spiky shapes and would assign words like "Boba" to round shapes.`
-                        }/>
-                        <MetricExplanation metric={"fresh_smelly"} min={"Fresh"} max={"Smelly"} text={"Fresh and Smelly refer "} />
-                        <MetricExplanation metric={"sleepy_amped"} min={"Sleepy"} max={"Amped"} />
-                    </div> */}
+                    <BobaKikiExplanation />
                 </section>
 
             </main>
