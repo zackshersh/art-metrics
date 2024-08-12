@@ -70,7 +70,7 @@ function RatingInputs({ratingsState, addNewValueSet, canSubmit, setCanSubmit, su
     // }, [boba_kiki, fresh_smelly])
 
     return (
-        <div className={`${sizingStyles} p-3 rounded-md flex flex-col justify-center`}>
+        <div className={`${sizingStyles} p-3 rounded-md flex flex-col justify-center relative`}>
 
             <div style={{
                 // display: "grid",
@@ -79,7 +79,7 @@ function RatingInputs({ratingsState, addNewValueSet, canSubmit, setCanSubmit, su
                 height:  "auto"}} 
             className={``}>
 
-                <RangeInput name={"boba_kiki"} minLabel={"Boba"} maxLabel={"Kiki"} value={boba_kiki} setValue={setRatingValue} incrementRatedCount={incrementRatedCount} verticalLayout={verticalLayout} verticallyCompact={verticalLayout}/>
+                <RangeInput name={"boba_kiki"} minLabel={"Boba"} maxLabel={"Kiki"} value={boba_kiki} setValue={setRatingValue} incrementRatedCount={incrementRatedCount} verticalLayout={verticalLayout} verticallyCompact={verticalLayout} hasTooltip/>
 
                 <RangeInput name={"fresh_smelly"} minLabel={"Fresh"} maxLabel={"Smelly"} value={fresh_smelly} setValue={setRatingValue} incrementRatedCount={incrementRatedCount} verticalLayout={verticalLayout} verticallyCompact={verticalLayout}/>
 

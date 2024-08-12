@@ -1,0 +1,17 @@
+
+.Tooltip {
+    /* left: 50%;
+
+    transform: translate(-50%, 0); */
+}
+
+.Tooltip p::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #292524 transparent;
+}
