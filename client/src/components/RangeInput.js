@@ -8,7 +8,7 @@ import RangeInputSlider2 from './RangeInputSlider2';
 import RangeSliderDisplay from './RangeSliderDisplay';
 import Tooltip from './Tooltip';
 
-function RangeInput({name, value, setValue, minLabel, maxLabel, min=-1, max=1, incrementRatedCount, verticalLayout, verticallyCompact, hasTooltip}) {
+function RangeInput({name, value, setValue, minLabel, maxLabel, min=-1, max=1, verticalLayout, verticallyCompact, hasTooltip, showBKPopup}) {
 
     const [hasInteracted, setHasInteracted] = useState(false);
     const [startPercent, setStartPercent] = useState(0);
@@ -74,7 +74,7 @@ function RangeInput({name, value, setValue, minLabel, maxLabel, min=-1, max=1, i
 
             <div className='mb-1 relative'>
                 { hasTooltip ? <Tooltip parentShow={showTooltip} text={"Adjust these sliders to reflect how you feel about each artwork"} id={"rating-slider-tooltip"} /> : "" }
-                <RangeSliderDisplay valueName={name} value={value} minLabel={minLabel} maxLabel={maxLabel} verticallyCompact={verticallyCompact}/>
+                <RangeSliderDisplay valueName={name} value={value} minLabel={minLabel} maxLabel={maxLabel} verticallyCompact={verticallyCompact} showBKPopup={showBKPopup}/>
                 <RangeInputSlider2 gradientColors={colors} min={-1} max={1} value={value} handler={handleChange}/>
             </div>
     )

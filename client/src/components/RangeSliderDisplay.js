@@ -5,7 +5,7 @@ import SvgDynamicIcon from './SvgDynamicIcon';
 import PopupWrapper from './PopupWrapper';
 import BobaKikiExplanation from './BobaKikiExplanation';
 
-function RangeSliderDisplay({value, valueName, minLabel, maxLabel, verticallyCompact}) {
+function RangeSliderDisplay({value, valueName, minLabel, maxLabel, verticallyCompact, showBKPopup}) {
 
     const [minValue, setMinValue] = useState(0);
     const [maxValue, setMaxValue] = useState(0);
@@ -23,11 +23,6 @@ function RangeSliderDisplay({value, valueName, minLabel, maxLabel, verticallyCom
     //     // }
     // }, [value]);
 
-    const [displayBobaKikiExlpanation, setDisplayBobaKikiExplanation] = useState(false);
-
-    const triggerBobaKikiExplanation = () => {
-        setDisplayBobaKikiExplanation(true);
-    }
 
     useEffect(() => {
 
@@ -65,14 +60,10 @@ function RangeSliderDisplay({value, valueName, minLabel, maxLabel, verticallyCom
 
             {/* BOBA-KIKI ? CONTAINER */}
             { valueName == "boba_kiki" ? 
-                <div className='w-5 h-5 border border-stone-500 p-1 flex justify-center items-center rounded-full cursor-pointer hover:opacity-60' onMouseDown={triggerBobaKikiExplanation}>
+                <div className='w-5 h-5 border border-stone-500 p-1 flex justify-center items-center rounded-full cursor-pointer hover:opacity-60' onMouseDown={showBKPopup}>
                     <p className='text-stone-500 text-sm'>?</p>
                 </div> : ""
             }
-
-            <PopupWrapper active={displayBobaKikiExlpanation} setActive={setDisplayBobaKikiExplanation}>
-                <BobaKikiExplanation />
-            </PopupWrapper>
 
         </div>
     );
