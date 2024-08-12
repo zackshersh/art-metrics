@@ -4,6 +4,8 @@ import { softDropShadow } from './boxShadowStyles';
 
 import { useNavigate } from 'react-router-dom';
 
+import logo from "../assets/images/logo.png"
+
 function Nav(props) {
 
     const navigate = useNavigate();
@@ -19,7 +21,10 @@ function Nav(props) {
 
     return (
         <nav style={{boxShadow: softDropShadow}} className='flex items-center justify-between p-3 px-6 bg-stone-200 border-b border-stone-300 '>
-            <h1 onMouseDown={navigateToTitle} className='font-bold text-xl cursor-pointer'>Expressive Metrics</h1>
+            <div onMouseDown={navigateToTitle} className='flex items-center cursor-pointer'>
+                <img className='w-[1.25rem] h-[1.25rem] mr-2' src={logo} />
+                <h1  className='font-bold text-xl'>Expressive Metrics</h1>
+            </div>
             <div onMouseDown={navigateToAbout} className='flex justify-center items-center border-2 border-black rounded-full w-[32px] h-[32px] cursor-pointer hover:opacity-60'>
                 <p className='font-bold text-xl'>?</p>
             </div>

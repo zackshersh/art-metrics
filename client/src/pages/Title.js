@@ -11,6 +11,7 @@ import { getAllArtworks } from '../utils/api';
 import { Link, useNavigate } from 'react-router-dom';
 import TitleJumbotron from '../components/TitleJumbotron';
 
+import logo from "../assets/images/logo.png"
 
 function TitleButton({text, path, primary=true, styles}){
 
@@ -73,7 +74,9 @@ function Title(props) {
                 boxShadow: dropShadow
             }} className='h-full flex w-full flex-col md:flex-row bg-stone-100 p-5 rounded-lg border-stone-600'>
                 <div className={`w-full h-full mr-3 pb-6 md:pb-0 md:pr-12`}>
-                    <h1 className='text-5xl font-bold'>Expressive Metrics</h1>
+                    <div className='flex flex-wrap'>
+                        <h1 className='text-5xl font-bold mr-3'>Expressive Metrics</h1>
+                    </div>
                     <h3 className='text-2xl leading-tight mt-3'>Quantifying the unquantifiable qualities of art.</h3>
                 </div>
                 <div className='flex w-full md:flex-row'>
