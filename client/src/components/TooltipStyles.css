@@ -3,6 +3,8 @@
     /* left: 50%;
 
     transform: translate(-50%, 0); */
+    transition-property: opacity;
+    transition-duration: 1000;
 }
 
 .Tooltip p::after {
