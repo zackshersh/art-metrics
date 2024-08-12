@@ -48,7 +48,7 @@ function RangeSliderDisplay({value, valueName, minLabel, maxLabel, verticallyCom
             {/* MAIN CONTENT CONTAINER */}
             <div className='flex items-center h-full'>
                 {/* SVG ICON */}
-                <SvgDynamicIcon valueName={valueName} value={value} scaleFactor={verticallyCompact ? 0.7 : 1} />
+                <SvgDynamicIcon valueName={valueName} value={value} colorExagerationFactor={0.6} scaleFactor={verticallyCompact ? 0.7 : 1} />
                 
                 {/* VALUE DISPLAY */}
                 <div className={`flex ${verticallyCompact ? "flex-row items-center" : "flex-col"} justify-center`}>

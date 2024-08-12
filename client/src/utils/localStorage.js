@@ -22,6 +22,10 @@ export const addToVisited = (_id) => {
 
 export const checkIfVisited = (_id) => {
     let arr = lsRetrieve("visited-works");
-    return arr.indexOf(_id) != -1;
+    if(arr){
+        return arr.indexOf(_id) != -1;
+    } else {
+        return false;
+    }
 }
 

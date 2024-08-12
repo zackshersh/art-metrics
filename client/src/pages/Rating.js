@@ -220,7 +220,7 @@ function Rating(props) {
             </div> */}
             <Nav></Nav>
             <div style={{
-                // boxShadow: "rgba(0, 0, 0, 0.2) 0px 4px 8px -4px inset"
+                boxShadow: "rgba(0, 0, 0, 0.2) 0px 4px 8px -4px inset"
             }}
             className={`bg-stone-300 p-2 flex ${verticalLayout ? "flex-col-reverse " : "flex-row items-center"}`}>
 

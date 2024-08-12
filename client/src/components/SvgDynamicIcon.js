@@ -10,7 +10,7 @@ function SvgDynamicIcon({valueName, value, scaleFactor, colorExagerationFactor=0
 
     // const [pathD, setPathD] = useState("");
 
-    const [t, setT] = useState(0);
+    const [t, setT] = useState(0.5);
     const [paths, setPaths] = useState();
 
     const [minColor, setMinColor] = useState(getMetricColors(valueName).start)
@@ -25,7 +25,6 @@ function SvgDynamicIcon({valueName, value, scaleFactor, colorExagerationFactor=0
     }, [])
     
     useEffect(() => {
-        // console.log(valueName);
         if(_value != value){
             set_Value(value);
 
@@ -81,7 +80,7 @@ function SvgDynamicIcon({valueName, value, scaleFactor, colorExagerationFactor=0
         }
     }
 
-    const singlePath = (path1, path2) => {
+    const singlePath = (path1, path2, t) => {
         let interpolated = interpolateSvgs(path1, path2, t);
         return interpolated;
     }

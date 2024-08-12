@@ -21,13 +21,13 @@ function TitleButton({text, path, primary=true, styles}){
 
     return (
         <div style={{
-            boxShadow: hovered ? "" : dropShadow,
+            // boxShadow: hovered ? "" : dropShadow,
+            boxShadow: "rgba(255, 255, 255, 0.4) 0 3px 20px -18px inset, rgba(0, 0, 0, 0.2) 0 2px 4px 0",
             transitionDuration: "0.05s"
             }} 
             onMouseDown={() => navigate(path)}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-
             className={` flex justify-start items-start ${primary ? "bg-stone-900 text-white hover:bg-stone-700 flex-grow" : "bg-stone-300 text-black hover:bg-stone-200 flex-grow-0"} transition-colors p-5 rounded-lg ${styles}`}>
             <h1 className='text-xl'>{text}</h1>
         </div>

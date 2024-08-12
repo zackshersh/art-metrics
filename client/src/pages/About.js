@@ -33,7 +33,10 @@ function MetricExplanation({metric, min, max, text}){
 }
 function About(props) {
     return (
-        <div>
+        <div style={{
+            display: "grid",
+            gridTemplateRows: "50px 1fr"
+        }}>
             <Nav />
             <main className='p-6'>
                 {/* <h1 className='text-7xl font-bold'>Expressive Metrics</h1> */}

@@ -74,7 +74,7 @@ function RangeInputSlider2({ value, handler, min, max, vertical, gradientColors}
             }}
              className='absolute top-0 w-full min-h-[28px] max-h-[28px] overflow-hidden rounded-md border border-stone-400 bg-stone-100 z-0'>
                 <svg style={{
-                    transform: `translateX(${scale(value, -1, 1, 0, (tickLineLength / 1.3)-(window.innerWidth / 2)) * -0.5}px)`
+                    transform: `translateX(${scale(value, -1, 1, 0, (tickLineLength / 1.3)-(window.innerWidth / 2)) * -0.2}px)`
                 }} width={tickLineLength} height={30}>
                     {generateTicks()}
                 </svg>
