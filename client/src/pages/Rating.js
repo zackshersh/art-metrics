@@ -237,7 +237,7 @@ function Rating(props) {
 
                 <div className='SPACER pl-2'> </div>
                 <div className={`${verticalLayout ? "w-full": "w-3/5"} h-full py-1 px-4 md:py-0 md:px-1`}>
-                    <div className='flex justify-center items-center h-full p-3 w-full rounded-lg bg-neutral-900 shadow-inner shadow-black'>
+                    <div className='flex justify-center items-center h-full p-3 w-full rounded-lg bg-neutral-900 shadow-inner shadow-black text-white'>
                         {checkIfValidCurrentWork() ? <MiniArtworkDisplay artwork={allArtworks[currentWorkIndex]} verticalLayout={verticalLayout}/> : "No Artworks Left"}
                     </div>
                 </div>

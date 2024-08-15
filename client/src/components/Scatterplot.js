@@ -56,7 +56,7 @@ function Scatterplot(props) {
     },[])
 
 
-    const margin = {x: 80, y: 30};
+    const margin = {x: window.innerWidth < 600 ? 50 : 80, y: 30};
 
     let x = d3.scaleLinear()
         .domain([-1, 1])
@@ -192,7 +192,12 @@ function Scatterplot(props) {
                                                         y: y(work.metrics[yAxis].mean)
                                                     }
                                                     
-                                                    return (<Dot key={i} work={work} pos={pos} setBackdrop={setBackdropImg} setDetailsPopupData={setDetailsPopupData}/>)
+                                                    // if(work.metrics.boba_kiki.valueHistory.length < 1){
+                                                    //     return null
+                                                    // } else {
+                                                        return (<Dot key={i} work={work} pos={pos} setBackdrop={setBackdropImg} setDetailsPopupData={setDetailsPopupData}/>)
+                                                    // }
+
                                                 }) : ""}
                                             </g>
                                             <ScatterPlotLinearGradients />
