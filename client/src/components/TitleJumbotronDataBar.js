@@ -33,6 +33,7 @@ function TitleJumbotronDataBar({currentWork}) {
             maxLength = Math.floor((window.innerWidth-40)/11)
 
         }
+
         if(title.length > maxLength){
             title = title.slice(0, maxLength) + "..."
         }

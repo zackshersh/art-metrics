@@ -1,0 +1,381 @@
+
+[
+    {
+        "work_data":{
+            "title": "A Reconnaissance",
+            "artist": "Frederic Remington",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/752047/1984407/main-image",
+            "date": "1902",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/752047"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Brooch",
+            "artist": "Marcus and Co.",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/702563/1617148/main-image",
+            "date": "1900",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/702563"
+        }
+    },
+    {
+        "work_data":{
+            "title": "High Bridge, New York",
+            "artist": "Henry Ward Ranger",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/11851/35055/main-image",
+            "date": "1905",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/11851"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Vase with geese",
+            "artist": "Artus Van Briggle",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/716905/2006027/main-image",
+            "date": "1900",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/716905"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Valley with Fir (Shade on the Mountain)",
+            "artist": "Henri-Edmond Cross (Henri-Edmond Delacroix)",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/459094/913488/main-image",
+            "date": "1909",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/459094"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Dancers in Ukranian Dress",
+            "artist": "Edgar Degas",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/459097/913492/main-image",
+            "date": "1899",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/459097"
+        }
+    },
+    {
+        "work_data":{
+            "title": "At the Circus: The Spanish Walk (Au Cirque: Le Pas espagnol)",
+            "artist": "Henri de Toulouse-Lautrec",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/459241/1510700/main-image",
+            "date": "1899",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/459241"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Rectangular Table",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/460498/917993/main-image",
+            "date": "Early 20th Century",
+            "origin": "Italian or American",
+            "link": "https://www.metmuseum.org/art/collection/search/460498"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Women Dancing in a Brothel",
+            "artist": "Constantin Guys",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/460031/913702/main-image",
+            "date": "ca. 1865",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/460031"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Ewer: Neptune and Amphitrite",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/460536/915072/main-image",
+            "date": "ca. 1859-1907",
+            "origin": "German (Aachen) or French (Paris)",
+            "link": "https://www.metmuseum.org/art/collection/search/460536"
+        }
+    },
+    {
+        "work_data":{
+            "title": "A View of Moulins",
+            "artist": "Henri-Joseph Harpignies",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/460044/1702932/main-image",
+            "date": "ca. 1850-1860",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/460044"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Salomé Dancing Before the Head of St. John the Baptist",
+            "artist": "Gustave Moreau",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/460053/2247711/main-image",
+            "date": "mid to late 19th century",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/460053"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Salomé Dancing Before the Head of St. John the Baptist",
+            "artist": "Gustave Moreau",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/460053/2247711/main-image",
+            "date": "mid to late 19th century",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/460053"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Goshawk, Stanley Hawk (No. 29)",
+            "artist": "John James Audubon",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/461566/915815/main-image",
+            "date": "1830",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/461566"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Two Drinkers",
+            "artist": "Honoré Daumier",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/460036/1736059/main-image",
+            "date": "mid-19th century",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/460036"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Miniature Tea Set",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/460950/918205/main-image",
+            "date": "ca. 1825-35",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/460950"
+        }
+    },
+    {
+        "work_data":{
+            "title": "View of Amalfi from the Capuchin Monastery",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/461163/1996848/main-image",
+            "date": "ca. 1810-40",
+            "origin": "Italian",
+            "link": "https://www.metmuseum.org/art/collection/search/461163"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Spain",
+            "artist": "Herzl Emanuel",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/488098/2256261/main-image",
+            "date": "ca. 1936-37",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/488098"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Country Store",
+            "artist": "Reginald Wilson",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/488127/2241729/main-image",
+            "date": "ca. 1939",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/488127"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Still Life",
+            "artist": "Ben Benn",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/488147/1630167/main-image",
+            "date": "1941",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/488147"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Farm in Moonlight",
+            "artist": "Daniel Koerner",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/488129/2246804/main-image",
+            "date": "1938",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/488129"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Composition of a House",
+            "artist": "Thomas Flavell",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/488114/998682/main-image",
+            "date": "ca. 1936",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/488114"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Rocks and Weeds",
+            "artist": "John Atherton",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/488743/2208825/main-image",
+            "date": "1951",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/488743"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Table Lamp",
+            "artist": "Pierre-Adrien Dalpayra",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/482371/1006589/main-image",
+            "date": "ca. 1900-1902",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/482371"
+        }
+    },
+    {
+        "work_data":{
+            "title": "The Fitting Room",
+            "artist": "Kenneth Hayes Miller",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/487688/1387579/main-image",
+            "date": "1931",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/487688"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Basketball (Convention Hall, Philadelphia)",
+            "artist": "Michael Leone",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/488103/2250019/main-image",
+            "date": "1935",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/488103"
+        }
+    },
+    {
+        "work_data":{
+            "title": "\"One Third of a Nation\"",
+            "artist": "O. Louis Guglielmi",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/488126/2247128/main-image",
+            "date": "1939",
+            "origin": "American",
+            "link": "https://www.metmuseum.org/art/collection/search/488126"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Janmastami celebrating the birth of Krishna",
+            "artist": "Calcutta Art Studio",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/849528/2051887/main-image",
+            "date": "ca. 1878-83",
+            "origin": "West Bengal, Calcutta",
+            "link": "https://www.metmuseum.org/art/collection/search/849528"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Netsuke of Child with a Carp",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/60027/1772626/main-image",
+            "date": "19th century",
+            "origin": "Japan",
+            "link": "https://www.metmuseum.org/art/collection/search/60027"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Netsuke of Animal on a Straw Mat under which is a Mouse",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/60310/1638397/main-image",
+            "date": "19th century",
+            "origin": "Japan",
+            "link": "https://www.metmuseum.org/art/collection/search/60310"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Plaque with dragons",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/748355/2226283/main-image",
+            "date": "early 15th century",
+            "origin": "China",
+            "link": "https://www.metmuseum.org/art/collection/search/748355"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Guan Yu",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/62002/1908308/main-image",
+            "date": "ca. 1700",
+            "origin": "China",
+            "link": "https://www.metmuseum.org/art/collection/search/62002"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Spouted Water Container (He)",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/53948/146928/main-image",
+            "date": "13th-12th century BCE",
+            "origin": "China",
+            "link": "https://www.metmuseum.org/art/collection/search/53948"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Standing male worshiper",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/327393/687483/main-image",
+            "date": "ca. 2500-2350 BCE",
+            "origin": "Sumerian",
+            "link": "https://www.metmuseum.org/art/collection/search/327393"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Decorated Doorway to North Chapel, Tomb of Puyemre",
+            "artist": "Norman de Garis Davies",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/544597/1520129/main-image",
+            "date": "A.D. 1917; original ca. 1479-1458 BCE",
+            "origin": "Egypt",
+            "link": "https://www.metmuseum.org/art/collection/search/544597"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Rhinoceros Amulet",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/570371/1584516/main-image",
+            "date": "200 BCE-200 AD",
+            "origin": "Egypt (Ptolemaic or Roman Period)",
+            "link": "https://www.metmuseum.org/art/collection/search/570371"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Masquerade Ball at the Ritz Hotel, Paris",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436927/2227696/main-image",
+            "date": "1909",
+            "origin": "Spanish",
+            "link": "https://www.metmuseum.org/art/collection/search/436927"
+        }
+    },
+    {
+        "work_data":{
+            "title": "The Banks of the Bièvre near Bicêtre",
+            "artist": "Henri Rousseau (le Douanier)",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/437512/800400/main-image",
+            "date": "ca. 1908-1909",
+            "origin": "French",
+            "link": "https://www.metmuseum.org/art/collection/search/437512"
+        }
+    },
+    {
+        "work_data":{
+            "title": "Mäda Primavesi",
+            "artist": "Gustav Klimt",
+            "img_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436819/801225/main-image",
+            "date": "1912-13",
+            "origin": "Austrian",
+            "link": "https://www.metmuseum.org/art/collection/search/436819"
+        }
+    }
+]
