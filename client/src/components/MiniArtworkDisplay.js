@@ -32,11 +32,11 @@ function MiniArtworkDisplay({artwork, verticalLayout}) {
                     // onMouseEnter={() => {setEnlarged(true)}}
                     // onMouseLeave={() => {setEnlarged(false)}}
                     onMouseDown={() => {setEnlarged(true)}}
-                    onTouchStart={handleTouchStart}
+                    // onTouchStart={handleTouchStart}
                     onTouchEnd={() => {setEnlarged(false)}}
                     className={`object-contain cursor-pointer rounded-md ${ verticalLayout ? "max-h-[35vh] max-w-[80vw]" : "max-h-[70vh] max-w-[50vw]"}`} 
                     src={artwork.work_data.img_url} />
-                <p className='absolute top-2 left-2 rounded-md bg-stone-200 py-1 px-2 text-sm opacity-55 pointer-events-none text-black'>+ Click to Enlarge</p>
+                {/* <p className='absolute top-2 left-2 rounded-md bg-stone-200 py-1 px-2 text-sm opacity-55 pointer-events-none text-black'>+ Click to Enlarge</p> */}
             </div>
             <div className='pt-3'>
                 <h5 className={`${verticalLayout ? "text-md" : "text-lg"} italic leading-snug text-white`}>{artwork.work_data.title}</h5>
