@@ -49,7 +49,7 @@ function ArtworkDisplay({artwork={}, largeImage, largeText, compact}) {
                 // EXPANDED LAYOUT
                 <div className={`max-h-1/2 sm:w-1/2 md:max-w-[500px]  p-4 shadow-inner shadow-stone-100 bg-stone-50 rounded-md overflow-scroll`}>
                     <TextWithLabel mainText={artwork.work_data.title} size={"lg"} label={"Title"} styles={titleStyles} />
-                    <TextWithLabel mainText={artwork.work_data.artist} size={"lg"} label={"Artist"} styles={artistStyles} />
+                    <TextWithLabel mainText={artwork.work_data.artist ? artwork.work_data.artist : "Unknown"} size={"lg"} label={"Artist"} styles={artistStyles} />
                     <div className='flex flex-wrap pt-2'>
                         <TextWithLabel mainText={artwork.work_data.date} size={"sm"} label={"Date"} styles={`${otherTextStyles} pr-5`} width='1/2'/>
                         <TextWithLabel mainText={artwork.work_data.origin} size={"sm"} label={"Origin"} styles={otherTextStyles} width='1/2' />

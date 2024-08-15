@@ -42,7 +42,7 @@ function ArtDetailsPopup({artwork, setArtwork}) {
                     <div className='p-3 bg-stone-100 mt-3 rounded-md shadow shadow-inner shadow-stone-400'>
                         <div className=''>
                             <TextWithLabel mainText={artwork.work_data.title} size={"lg"} label={"Title"} styles={'italic'}  />
-                            <TextWithLabel mainText={artwork.work_data.artist} size={"lg"} label={"Artist"} />
+                            <TextWithLabel mainText={artwork.work_data.artist || "Unknown"} size={"lg"} label={"Artist"} />
                             <div className='flex flex-wrap pt-2'>
                                 <TextWithLabel mainText={artwork.work_data.date} size={"sm"} label={"Date"} styles={`pr-5`} width='1/2'/>
                                 <TextWithLabel mainText={artwork.work_data.origin} size={"sm"} label={"Origin"}  width='1/2' />
